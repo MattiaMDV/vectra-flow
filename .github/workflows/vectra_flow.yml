@@ -30,6 +30,7 @@ jobs:
 
       - name: Copy latest report to Pages folder
         run: |
+          python -m vectra_flow.cli --input-glob "data/*.csv" --out-dir reports
           mkdir -p docs
           cp reports/latest.md docs/latest.md
 
