@@ -29,8 +29,7 @@ jobs:
         run: |
           mkdir -p docs
           cp reports/latest.md docs/latest.md
-      - name: Commit reports (if changed)
-        run: |
+      - name: git add reports docs/latest.md docs/index.html docs/index.md        run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           git add reports
