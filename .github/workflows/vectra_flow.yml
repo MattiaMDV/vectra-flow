@@ -27,8 +27,8 @@ jobs:
 
       - name: Generate report
         run: |
-          python -m vectra_flow.cli --input-glob "data/*.csv" --out-dir "reports"
-
+          mkdir -p docs
+          cp reports/latest.md docs/latest.md
       - name: Commit reports (if changed)
         run: |
           git config user.name "github-actions"
