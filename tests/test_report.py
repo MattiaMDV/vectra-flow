@@ -5,7 +5,7 @@ import pandas as pd
 import pytest
 
 from vectra_flow.analyze import analyze_dataset
-from vectra_flow.report import render_markdown, write_reports
+from vectra_flow.report import render_html, render_markdown, write_reports
 
 
 @pytest.fixture()
@@ -50,10 +50,36 @@ def test_render_markdown_contains_topics_section(analysis_results) -> None:
     assert "## Topics" in md
 
 
+def test_render_html_returns_string(analysis_results) -> None:
+    page = render_html(analysis_results)
+    assert isinstance(page, str)
+
+
+def test_render_html_is_valid_html(analysis_results) -> None:
+    page = render_html(analysis_results)
+    assert page.startswith("<!DOCTYPE html>")
+    assert "<html" in page
+    assert "</html>" in page
+
+
+def test_render_html_contains_report_content(analysis_results) -> None:
+    page = render_html(analysis_results)
+    assert "Vectra Flow" in page
+    assert "Overall" in page
+    assert "Topics" in page
+
+
+def test_render_html_escapes_special_chars(analysis_results) -> None:
+    """Product names containing HTML-special chars must be escaped."""
+    page = render_html(analysis_results)
+    # Confirm the page does not contain raw unescaped angle brackets from data
+    assert "<script>" not in page
+
+
 def test_write_reports_creates_files(tmp_path: Path, analysis_results) -> None:
     out_dir = tmp_path / "reports"
     paths = write_reports(analysis_results, out_dir)
-    assert len(paths) == 3
+    assert len(paths) == 4
     for p in paths:
         assert p.exists(), f"Expected {p} to exist"
 
@@ -62,6 +88,15 @@ def test_write_reports_latest_md_exists(tmp_path: Path, analysis_results) -> Non
     out_dir = tmp_path / "reports"
     write_reports(analysis_results, out_dir)
     assert (out_dir / "latest.md").exists()
+
+
+def test_write_reports_latest_html_exists(tmp_path: Path, analysis_results) -> None:
+    out_dir = tmp_path / "reports"
+    write_reports(analysis_results, out_dir)
+    html_path = out_dir / "latest.html"
+    assert html_path.exists()
+    content = html_path.read_text(encoding="utf-8")
+    assert "<!DOCTYPE html>" in content
 
 
 def test_write_reports_latest_json_exists(tmp_path: Path, analysis_results) -> None:
