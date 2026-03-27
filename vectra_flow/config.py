@@ -29,3 +29,21 @@ class AssetSettings:
     required_columns = ("url", "title", "asking_price", "monthly_revenue", "monthly_traffic")
 
 ASSET_SETTINGS = AssetSettings()
+
+
+@dataclass(frozen=True)
+class ScoutSettings:
+    """Configuration for the Asset Scout mode."""
+
+    reports_dir: Path = Path("reports/notifications")
+
+    # Minimum scout relevance score (0.0–1.0) to surface an asset.
+    min_score: float = 0.3
+
+    # Network timeout per forum request (seconds).
+    timeout: int = 30
+
+    # Maximum paragraphs extracted per forum page.
+    max_paragraphs_per_url: int = 300
+
+SCOUT_SETTINGS = ScoutSettings()
