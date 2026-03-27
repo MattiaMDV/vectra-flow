@@ -26,16 +26,19 @@ jobs:
           pip install -r requirements.txt
 
       - name: Generate report
+        run: python -m vectra_flow.cli
+
+      - name: Copy latest report to Pages folder
         run: |
           python -m vectra_flow.cli --input-glob "data/*.csv" --out-dir reports
           mkdir -p docs
           cp reports/latest.md docs/latest.md
 
-      - name: Commit and push
+      - name: Commit reports (if changed)
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add reports docs/latest.md docs/index.html docs/index.md
+          git add reports docs
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
