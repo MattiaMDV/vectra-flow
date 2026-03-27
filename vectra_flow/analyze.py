@@ -48,7 +48,7 @@ def analyze_dataset(df: pd.DataFrame, n_topics: int = 8) -> AnalysisResults:
         max_features=5000,
         stop_words="english",
         ngram_range=(1, 2),
-        min_df=2,
+        min_df=1 if len(df) < 10 else 2,
     )
     X = vectorizer.fit_transform(df["text"].tolist())
     n_topics = max(2, min(n_topics, X.shape[0]))
@@ -81,7 +81,7 @@ def analyze_dataset(df: pd.DataFrame, n_topics: int = 8) -> AnalysisResults:
 
     date_min = None if df["date"].isna().all() else df["date"].min().isoformat()
     date_max = None if df["date"].isna().all() else df["date"].max().isoformat()
-    generated_at_utc = pd.Timestamp.utcnow().isoformat()
+    generated_at_utc = pd.Timestamp.now("UTC").isoformat()
 
     return AnalysisResults(
         generated_at_utc=generated_at_utc,
