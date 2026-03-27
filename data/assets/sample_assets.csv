@@ -1,0 +1,9 @@
+url,title,asking_price,monthly_revenue,monthly_traffic,tech_stack,category,has_email_list,current_monetization
+https://chromewebstore.google.com/detail/focusblock,FocusBlock — Productivity Chrome Extension,200,0,350,"JavaScript,Chrome Extension API",browser-extension,false,
+https://acquire.com/listing/quicknote-app,QuickNote — Minimalist Note-Taking Web App,450,30,1200,"PHP5,jQuery,MySQL",micro-saas,false,ads
+https://acquire.com/listing/linktreeclone,LinkHub — Bio Link Page Builder,800,55,4500,"Python,Flask,PostgreSQL",micro-saas,true,"subscription,affiliate"
+https://microacquire.com/listing/pdfconverter,PDFWiz — Online PDF Converter,150,0,8000,"Node.js,Express",web-tool,false,
+https://acquire.com/listing/recipekeeper,RecipeKeeper — Recipe Management SaaS,300,20,600,"Ruby on Rails,Heroku",micro-saas,false,subscription
+https://acquire.com/listing/jobboard,DevJobs — Niche Developer Job Board,1200,90,12000,"Next.js,Supabase,Vercel",job-board,true,"subscription,advertising"
+https://acquire.com/listing/emailverifier,MailCheck — Email Validation API,500,0,200,"Python,FastAPI",api-tool,false,
+https://microacquire.com/listing/landingpagebuilder,PageDrop — No-Code Landing Page Builder,700,35,3200,"Vue.js,Firebase",no-code,true,subscription

@@ -7,6 +7,16 @@ from vectra_flow.report import write_reports
 
 def main() -> int:
     parser = argparse.ArgumentParser(prog="vectra-flow")
+    parser.add_argument(
+        "--mode",
+        choices=["feedback", "assets"],
+        default="feedback",
+        help=(
+            "Operating mode: "
+            "'feedback' (default) runs the sentiment & topic analysis pipeline; "
+            "'assets' runs the Digital Real Estate & Flip portfolio manager."
+        ),
+    )
     parser.add_argument("--input-glob", default="data/*.csv")
     parser.add_argument("--out-dir", default="reports")
     parser.add_argument("--n-topics", type=int, default=8)
@@ -43,6 +53,13 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    if args.mode == "assets":
+        return _run_assets(args, parser)
+    return _run_feedback(args, parser)
+
+
+def _run_feedback(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
+    """Original sentiment & topic analysis pipeline."""
     column_map = None
     if args.column_map:
         try:
@@ -76,6 +93,25 @@ def main() -> int:
     for p in out_paths:
         print(f"- {p}")
     return 0
+
+
+def _run_assets(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:  # noqa: ARG001
+    """Digital Real Estate & Flip pipeline."""
+    from vectra_flow.asset_ingest import load_assets
+    from vectra_flow.asset_score import score_assets
+    from vectra_flow.asset_report import write_asset_reports
+
+    input_glob = args.input_glob if args.input_glob != "data/*.csv" else "data/assets/*.csv"
+    assets = load_assets(input_glob, max_rows=args.max_rows)
+    scored = score_assets(assets)
+
+    out_paths = write_asset_reports(scored, out_dir=Path(args.out_dir))
+    print(f"Digital Real Estate & Flip — {len(scored)} asset(s) analysed.")
+    print("Generated reports:")
+    for p in out_paths:
+        print(f"- {p}")
+    return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
