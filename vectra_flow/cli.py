@@ -9,12 +9,14 @@ def main() -> int:
     parser = argparse.ArgumentParser(prog="vectra-flow")
     parser.add_argument(
         "--mode",
-        choices=["feedback", "assets"],
+        choices=["feedback", "assets", "scout"],
         default="feedback",
         help=(
             "Operating mode: "
             "'feedback' (default) runs the sentiment & topic analysis pipeline; "
-            "'assets' runs the Digital Real Estate & Flip portfolio manager."
+            "'assets' runs the Digital Real Estate & Flip portfolio manager; "
+            "'scout' scans crypto forums for undervalued digital assets and "
+            "generates partnership outreach notifications."
         ),
     )
     parser.add_argument("--input-glob", default="data/*.csv")
@@ -51,10 +53,41 @@ def main() -> int:
             "Example: 'https://www.reddit.com/r/myproduct/,https://forum.example.com/t/123'"
         ),
     )
+    parser.add_argument(
+        "--scout-urls",
+        default="",
+        metavar="URL[,URL,…]",
+        help=(
+            "Comma-separated list of forum URLs for --mode scout to scan. "
+            "Defaults to the built-in list (Reddit, Bitcointalk, governance forums, "
+            "Binance Square) when not provided."
+        ),
+    )
+    parser.add_argument(
+        "--notify-dir",
+        default="",
+        metavar="DIR",
+        help=(
+            "Directory where scout partnership-notification files are written. "
+            "Defaults to 'reports/notifications'."
+        ),
+    )
+    parser.add_argument(
+        "--min-scout-score",
+        type=float,
+        default=0.3,
+        metavar="SCORE",
+        help=(
+            "Minimum relevance score (0.0–1.0) for the scout to surface an asset. "
+            "Default: 0.3"
+        ),
+    )
     args = parser.parse_args()
 
     if args.mode == "assets":
         return _run_assets(args, parser)
+    if args.mode == "scout":
+        return _run_scout(args, parser)
     return _run_feedback(args, parser)
 
 
@@ -108,6 +141,39 @@ def _run_assets(args: argparse.Namespace, parser: argparse.ArgumentParser) -> in
     out_paths = write_asset_reports(scored, out_dir=Path(args.out_dir))
     print(f"Digital Real Estate & Flip — {len(scored)} asset(s) analysed.")
     print("Generated reports:")
+    for p in out_paths:
+        print(f"- {p}")
+    return 0
+
+
+def _run_scout(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:  # noqa: ARG001
+    """Asset Scout — scan crypto forums and send partnership notifications."""
+    from vectra_flow.asset_scout import scan_forums, DEFAULT_SCOUT_URLS
+    from vectra_flow.partnership_notify import create_proposals, write_proposals
+
+    urls = (
+        [u.strip() for u in args.scout_urls.split(",") if u.strip()]
+        if args.scout_urls
+        else DEFAULT_SCOUT_URLS
+    )
+
+    notify_dir = Path(args.notify_dir) if args.notify_dir else Path("reports/notifications")
+
+    print(f"Scout: scanning {len(urls)} forum source(s) …")
+    assets = scan_forums(
+        urls,
+        min_score=args.min_scout_score,
+    )
+    print(f"Scout: found {len(assets)} asset mention(s) with score ≥ {args.min_scout_score}.")
+
+    if not assets:
+        print("No qualifying assets discovered. Try lowering --min-scout-score.")
+        return 0
+
+    proposals = create_proposals(assets)
+    out_paths = write_proposals(proposals, out_dir=notify_dir)
+
+    print(f"Partnership notifications generated for {len(proposals)} asset(s):")
     for p in out_paths:
         print(f"- {p}")
     return 0
