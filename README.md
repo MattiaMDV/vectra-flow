@@ -1,6 +1,5 @@
 # vectra-flow
-Vectra-Flow è un agente AI di nuova generazione progettato per operare come una "software house" composta da un unico individuo digitale. Il suo obiettivo è individuare, costruire soluzioni software di nicchia senza alcun intervento umano.
-
+Vetra-Flow è un agente AI di nuova generazione progettato per operare come una "software house" composta da un unico individuo digitale. Il suo obiettivo è, estrapolando informazioni dai forum online, individuare soluzioni di nicchia senza alcun intervento umano.
 ## Integrazione con Google Forms / Google Sheets
 
 Vectra-Flow supporta l'aggiornamento automatico dei dati di input tramite un foglio Google (ad es. le risposte di un Google Form), senza alcun intervento manuale.
