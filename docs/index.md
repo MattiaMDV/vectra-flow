@@ -1,3 +1,3 @@
 # Vectra Flow — Demo
 
-Report più recente: ../reports/latest.md
+[Report più recente](./latest.md)
