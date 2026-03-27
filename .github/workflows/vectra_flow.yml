@@ -25,6 +25,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Fetch Google Sheets data
+        env:
+          SHEET_URL: ${{ secrets.SHEET_URL }}
+          COLUMN_MAP: ${{ secrets.COLUMN_MAP }}
+        run: python -m vectra_flow.fetch_inputs
+
       - name: Generate report
         run: python -m vectra_flow.cli --input-glob "data/*.csv" --out-dir reports
 
