@@ -1,0 +1,96 @@
+{
+  "generated_at_utc": "2026-03-27T10:58:31.368056+00:00",
+  "rows": 3,
+  "date_min": "2026-03-20T00:00:00+00:00",
+  "date_max": "2026-03-22T00:00:00+00:00",
+  "sentiment_overall": {
+    "sentiment_compound_mean": 0.22923333333333332,
+    "rating_mean": 2.6666666666666665,
+    "rows_with_rating": 3
+  },
+  "sentiment_by_product": [
+    {
+      "product": "Widget A",
+      "rows": 2,
+      "sentiment_compound_mean": 0.59915,
+      "rating_mean": 3.5
+    },
+    {
+      "product": "Widget B",
+      "rows": 1,
+      "sentiment_compound_mean": -0.5106,
+      "rating_mean": 1.0
+    }
+  ],
+  "topics": [
+    {
+      "topic_id": 0,
+      "size": 1,
+      "top_terms": [
+        "times",
+        "failing mobile",
+        "mobile",
+        "retry",
+        "retry times",
+        "mobile retry",
+        "failing",
+        "kept"
+      ],
+      "examples": [
+        {
+          "date": "2026-03-21T00:00:00+00:00",
+          "product": "Widget B",
+          "rating": 1.0,
+          "sentiment_compound": -0.5106,
+          "text": "Checkout kept failing on mobile, I had to retry three times."
+        }
+      ]
+    },
+    {
+      "topic_id": 1,
+      "size": 1,
+      "top_terms": [
+        "use fast",
+        "use",
+        "love easy",
+        "delivery",
+        "easy",
+        "easy use",
+        "fast",
+        "fast delivery"
+      ],
+      "examples": [
+        {
+          "date": "2026-03-22T00:00:00+00:00",
+          "product": "Widget A",
+          "rating": 5.0,
+          "sentiment_compound": 0.7964,
+          "text": "Love it. Easy to use and fast delivery."
+        }
+      ]
+    },
+    {
+      "topic_id": 2,
+      "size": 1,
+      "top_terms": [
+        "support",
+        "quickly",
+        "support didn",
+        "slower",
+        "slower expected",
+        "shipping slower",
+        "shipping",
+        "reply quickly"
+      ],
+      "examples": [
+        {
+          "date": "2026-03-20T00:00:00+00:00",
+          "product": "Widget A",
+          "rating": 2.0,
+          "sentiment_compound": 0.4019,
+          "text": "Shipping was slower than expected and support didn't reply quickly."
+        }
+      ]
+    }
+  ]
+}
