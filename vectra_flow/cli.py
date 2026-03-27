@@ -31,6 +31,16 @@ def main() -> int:
             "Example: '{\"Timestamp\":\"date\",\"Feedback\":\"text\",\"Score\":\"rating\",\"Product\":\"product\"}'"
         ),
     )
+    parser.add_argument(
+        "--web-urls",
+        default="",
+        metavar="URL[,URL,…]",
+        help=(
+            "Comma-separated list of public web/forum URLs to scrape for text. "
+            "Extracted paragraphs are merged with the CSV data before analysis. "
+            "Example: 'https://www.reddit.com/r/myproduct/,https://forum.example.com/t/123'"
+        ),
+    )
     args = parser.parse_args()
 
     column_map = None
@@ -48,7 +58,18 @@ def main() -> int:
         fetch_sheet(args.sheet_url, sheet_dest, column_map=column_map)
         print(f"Fetched sheet data → {sheet_dest}")
 
+    import pandas as pd
     df = load_inputs(args.input_glob, max_rows=args.max_rows)
+
+    if args.web_urls:
+        from vectra_flow.fetch_web import fetch_web_sources
+        urls = [u.strip() for u in args.web_urls.split(",") if u.strip()]
+        if urls:
+            web_df = fetch_web_sources(urls)
+            if not web_df.empty:
+                df = pd.concat([df, web_df], ignore_index=True)
+                print(f"Fetched {len(web_df)} paragraphs from {len(urls)} web source(s).")
+
     results = analyze_dataset(df, n_topics=args.n_topics)
     out_paths = write_reports(results, out_dir=Path(args.out_dir))
     print("Generated reports:")

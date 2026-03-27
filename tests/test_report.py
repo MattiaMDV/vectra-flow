@@ -70,10 +70,25 @@ def test_render_html_contains_report_content(analysis_results) -> None:
 
 
 def test_render_html_escapes_special_chars(analysis_results) -> None:
-    """Product names containing HTML-special chars must be escaped."""
-    page = render_html(analysis_results)
-    # Confirm the page does not contain raw unescaped angle brackets from data
-    assert "<script>" not in page
+    """Product names containing HTML-special chars must be escaped in data cells."""
+    import pandas as pd
+    from vectra_flow.analyze import analyze_dataset
+
+    df = pd.DataFrame({
+        "date": pd.to_datetime(["2026-01-01", "2026-01-02", "2026-01-03"], utc=True),
+        "text": [
+            "<script>alert('xss')</script>",
+            "Normal feedback text here.",
+            "Another normal feedback text.",
+        ],
+        "rating": [3.0, 4.0, 5.0],
+        "product": ["<b>Widget</b>", "Widget A", "Widget A"],
+    })
+    results = analyze_dataset(df, n_topics=2)
+    page = render_html(results)
+    # Raw unescaped injection attempts must not appear literally in the data sections.
+    assert "<b>Widget</b>" not in page
+    assert "alert('xss')" not in page
 
 
 def test_write_reports_creates_files(tmp_path: Path, analysis_results) -> None:
