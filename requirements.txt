@@ -1,0 +1,2 @@
+# Python package dependencies for vectra-flow
+# No third-party runtime dependencies required – uses only the standard library.

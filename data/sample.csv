@@ -1,0 +1,11 @@
+name,description,market_size,competition,feasibility,category,url
+AI Writing Assistant,Browser extension that rewrites emails in your tone,0.82,0.6,0.75,Productivity,https://example.com/ai-write
+Niche SEO Tracker,Keyword rank tracker focused on micro-niches,0.65,0.45,0.80,Marketing,https://example.com/seo
+Invoice Automation,Auto-generate invoices from time-tracking CSV exports,0.70,0.55,0.90,Finance,https://example.com/invoice
+Remote Team Standup,Async standup bot for small remote teams,0.60,0.70,0.70,Collaboration,https://example.com/standup
+Podcast Transcript AI,Transcribe and summarise podcast episodes automatically,0.78,0.65,0.80,Media,https://example.com/podcast
+SaaS Churn Predictor,Predict customer churn from usage logs,0.85,0.72,0.65,Analytics,https://example.com/churn
+Micro SaaS Idea Finder,Scrape forums for under-served software needs,0.90,0.40,0.55,Research,https://example.com/idea
+Freelance Rate Calculator,Suggest hourly rates based on skills and market data,0.55,0.30,0.95,Finance,https://example.com/rate
+Legal Doc Summariser,Summarise contracts and NDAs with AI,0.88,0.80,0.70,Legal,https://example.com/legal
+Bug Triage Assistant,Automatically label and prioritise GitHub issues,0.72,0.60,0.85,DevTools,https://example.com/bugtriage

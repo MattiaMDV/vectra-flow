@@ -1,0 +1,44 @@
+name: vectra_flow
+
+on:
+  push:
+    branches:
+      - main
+      - "vectra-flow"
+  pull_request:
+    branches:
+      - main
+      - "vectra-flow"
+  schedule:
+    # Run the pipeline every day at 06:00 UTC
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    name: Run vectra_flow pipeline
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Run pipeline
+        run: python -m vectra_flow.cli run --input data/sample.csv --output reports/latest_report.html
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vectra-flow-report
+          path: reports/latest_report.html
+          if-no-files-found: error
