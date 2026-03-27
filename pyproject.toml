@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vectra-flow"
+version = "0.1.0"
+description = "AI-powered sentiment & topic analysis agent for customer feedback"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "scikit-learn>=1.4.0",
+    "vaderSentiment>=3.3.2",
+]
+
+[project.scripts]
+vectra-flow = "vectra_flow.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vectra_flow*"]
