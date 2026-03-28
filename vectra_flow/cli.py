@@ -109,7 +109,7 @@ def _run_feedback(args: argparse.Namespace, parser: argparse.ArgumentParser) -> 
         print(f"Fetched sheet data → {sheet_dest}")
 
     import pandas as pd
-    df = load_inputs(args.input_glob, max_rows=args.max_rows)
+    df = load_inputs(args.input_glob, max_rows=args.max_rows, column_map=column_map)
 
     if args.web_urls:
         from vectra_flow.fetch_web import fetch_web_sources

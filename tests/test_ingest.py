@@ -69,3 +69,22 @@ def test_validate_columns_missing() -> None:
     df = pd.DataFrame({"date": [], "text": [], "product": []})
     with pytest.raises(ValueError, match="Missing required columns"):
         _validate_columns(df)
+
+
+def test_load_inputs_column_map(tmp_path: Path) -> None:
+    """column_map should rename Italian headers before validation."""
+    csv = tmp_path / "italian.csv"
+    csv.write_text(
+        "Timestamp,Il tuo feedback,Valutazione (1-5),Prodotto\n"
+        "2026-03-20,Ottimo prodotto!,5,Widget A\n",
+        encoding="utf-8",
+    )
+    column_map = {
+        "Timestamp": "date",
+        "Il tuo feedback": "text",
+        "Valutazione (1-5)": "rating",
+        "Prodotto": "product",
+    }
+    df = load_inputs(str(csv), column_map=column_map)
+    assert list(df.columns[:4]) == ["date", "text", "rating", "product"]
+    assert len(df) == 1
