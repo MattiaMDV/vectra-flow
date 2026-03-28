@@ -32,7 +32,14 @@ jobs:
         run: python -m vectra_flow.fetch_inputs
 
       - name: Generate report
-        run: python -m vectra_flow.cli --input-glob "data/*.csv" --out-dir reports
+        env:
+          COLUMN_MAP: ${{ secrets.COLUMN_MAP }}
+        run: |
+          if [ -n "$COLUMN_MAP" ]; then
+            python -m vectra_flow.cli --input-glob "data/*.csv" --out-dir reports --column-map "$COLUMN_MAP"
+          else
+            python -m vectra_flow.cli --input-glob "data/*.csv" --out-dir reports
+          fi
 
       - name: Copy latest report to Pages folder
         run: |

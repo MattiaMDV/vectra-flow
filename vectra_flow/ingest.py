@@ -1,4 +1,5 @@
 import glob
+from typing import Optional
 import pandas as pd
 from vectra_flow.config import SETTINGS
 
@@ -7,7 +8,11 @@ def _validate_columns(df: pd.DataFrame) -> None:
     if missing:
         raise ValueError(f"Missing required columns: {missing}. Found: {list(df.columns)}")
 
-def load_inputs(input_glob: str, max_rows: int = 20000) -> pd.DataFrame:
+def load_inputs(
+    input_glob: str,
+    max_rows: int = 20000,
+    column_map: Optional[dict] = None,
+) -> pd.DataFrame:
     files = sorted(glob.glob(input_glob))
     if not files:
         raise FileNotFoundError(f"No CSV files found for glob: {input_glob}")
@@ -15,6 +20,8 @@ def load_inputs(input_glob: str, max_rows: int = 20000) -> pd.DataFrame:
     frames = []
     for f in files:
         df = pd.read_csv(f)
+        if column_map:
+            df = df.rename(columns={k: v for k, v in column_map.items() if k in df.columns})
         _validate_columns(df)
         frames.append(df)
 
