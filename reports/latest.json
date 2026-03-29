@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-27T11:36:06.927082+00:00",
+  "generated_at_utc": "2026-03-29T10:02:07.539810+00:00",
   "rows": 3,
   "date_min": "2026-03-20T00:00:00+00:00",
   "date_max": "2026-03-22T00:00:00+00:00",
@@ -92,5 +92,12 @@
         }
       ]
     }
+  ],
+  "trend_direction": "stable",
+  "solutions": [
+    "Affrontare le problematiche relative a: times, failing mobile, mobile, retry. I consumatori esprimono insoddisfazione \u2014 valuta miglioramenti rapidi.",
+    "Valorizzare il punto di forza: use fast, use, love easy, delivery. Il sentiment positivo in quest'area pu\u00f2 essere amplificato con comunicazione mirata.",
+    "Valorizzare il punto di forza: support, quickly, support didn, slower. Il sentiment positivo in quest'area pu\u00f2 essere amplificato con comunicazione mirata.",
+    "Il trend \u00e8 stabile: mantieni la qualit\u00e0 attuale e cerca segnali anticipatori di cambiamento nei topic emergenti."
   ]
 }

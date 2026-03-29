@@ -1,6 +1,6 @@
 # Vectra Flow — Sentiment & Trends Report
 
-Generated at (UTC): **2026-03-27T11:36:06.927082+00:00**
+Generated at (UTC): **2026-03-29T10:02:07.539810+00:00**
 Rows analyzed: **3**
 Date range: **2026-03-20T00:00:00+00:00 → 2026-03-22T00:00:00+00:00**
 
@@ -11,6 +11,9 @@ Date range: **2026-03-20T00:00:00+00:00 → 2026-03-22T00:00:00+00:00**
 ## By product (top)
 - **Widget A** — rows=2, sentiment=0.599, rating=3.50
 - **Widget B** — rows=1, sentiment=-0.511, rating=1.00
+
+## Trend
+🟡 Stabile
 
 ## Topics (clusters)
 ### Topic 0 (n=1)
@@ -30,6 +33,12 @@ Top terms: `support, quickly, support didn, slower, slower expected, shipping sl
 
 Examples:
 - (2026-03-20T00:00:00+00:00) [Widget A] rating=2.0 sentiment=0.402 — Shipping was slower than expected and support didn't reply quickly.
+
+## Soluzioni consigliate
+- Affrontare le problematiche relative a: times, failing mobile, mobile, retry. I consumatori esprimono insoddisfazione — valuta miglioramenti rapidi.
+- Valorizzare il punto di forza: use fast, use, love easy, delivery. Il sentiment positivo in quest'area può essere amplificato con comunicazione mirata.
+- Valorizzare il punto di forza: support, quickly, support didn, slower. Il sentiment positivo in quest'area può essere amplificato con comunicazione mirata.
+- Il trend è stabile: mantieni la qualità attuale e cerca segnali anticipatori di cambiamento nei topic emergenti.
 
 ## Customer Feedback (to be filled by the client)
 - Utility rating (1–5):
