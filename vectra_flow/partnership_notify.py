@@ -26,6 +26,7 @@ Each proposal contains:
 from __future__ import annotations
 
 import dataclasses
+import html
 import json
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -196,7 +197,7 @@ def write_proposals(
     proposals: Sequence[PartnershipProposal],
     out_dir: Path,
 ) -> list[Path]:
-    """Persist *proposals* to disk as JSON, Markdown, and plain-text files.
+    """Persist *proposals* to disk as JSON, Markdown, plain-text, and HTML files.
 
     Parameters
     ----------
@@ -209,7 +210,7 @@ def write_proposals(
     -------
     list[Path]
         Paths of the files that were written:
-        ``[notifications.json, notifications.md, notifications.txt]``.
+        ``[notifications.json, notifications.md, notifications.txt, notifications.html]``.
     """
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -228,7 +229,11 @@ def write_proposals(
     txt_path = out_dir / "notifications.txt"
     txt_path.write_text(_render_plaintext(proposals), encoding="utf-8")
 
-    return [json_path, md_path, txt_path]
+    # ---- HTML (published to GitHub Pages) ------------------------------
+    html_path = out_dir / "notifications.html"
+    html_path.write_text(_render_html(proposals), encoding="utf-8")
+
+    return [json_path, md_path, txt_path, html_path]
 
 
 # ---------------------------------------------------------------------------
@@ -339,3 +344,126 @@ def _render_plaintext(proposals: Sequence[PartnershipProposal]) -> str:
         parts.append(separator)
         parts.append("")
     return "\n".join(parts)
+
+
+def _render_html(proposals: Sequence[PartnershipProposal]) -> str:
+    """Return a self-contained HTML page listing all partnership proposals."""
+
+    def esc(value: object) -> str:
+        return html.escape(str(value))
+
+    generated_at = datetime.now(timezone.utc).isoformat()
+
+    cards_html = ""
+    for i, p in enumerate(proposals, 1):
+        tickers_html = (
+            f"<li><strong>Tickers:</strong> {esc(', '.join(p.tickers))}</li>"
+            if p.tickers else ""
+        )
+        project_urls_html = ""
+        if p.project_urls:
+            links = " ".join(
+                f"<a href='{esc(u)}' target='_blank' rel='noopener'>{esc(u)}</a>"
+                for u in p.project_urls
+            )
+            project_urls_html = f"<li><strong>Project URLs:</strong> {links}</li>"
+        cards_html += f"""
+  <div class='proposal-card'>
+    <h3>{esc(i)}. {esc(p.asset_name)}</h3>
+    <div class='proposal-meta'>
+      <span class='badge score-badge'>Score {esc(f'{p.discovery_score:.3f}')}</span>
+      <span class='badge platform-badge'>{esc(p.source_platform)}</span>
+    </div>
+    <ul class='meta-list'>
+      <li><strong>Source:</strong>
+          <a href='{esc(p.source_url)}' target='_blank' rel='noopener'>{esc(p.source_url)}</a></li>
+      <li><strong>Created at (UTC):</strong> {esc(p.created_at)}</li>
+      <li><strong>Free period ends:</strong> {esc(p.free_period_ends_at)}</li>
+      <li><strong>Fee rate (post-free):</strong> {esc(int(p.fee_rate * 100))}%</li>
+      {tickers_html}
+      {project_urls_html}
+    </ul>
+    <div class='snippet'>
+      <strong>Snippet:</strong>
+      <blockquote>{esc(p.snippet[:300])}</blockquote>
+    </div>
+    <div class='outreach'>
+      <strong>Outreach message:</strong>
+      <pre>{esc(p.outreach_message)}</pre>
+    </div>
+  </div>"""
+
+    empty_html = ""
+    if not proposals:
+        empty_html = (
+            "<p class='empty-notice'>No qualifying assets discovered in this scan. "
+            "The scout will retry on the next scheduled run.</p>"
+        )
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vectra-Flow — Partnership Proposals</title>
+  <style>
+    body {{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+           max-width:960px;margin:0 auto;padding:2rem 1rem;color:#1a1a2e;background:#f8f9fa;}}
+    h1 {{color:#0f3460;border-bottom:3px solid #e94560;padding-bottom:.5rem;}}
+    h2 {{color:#16213e;margin-top:2rem;}}
+    h3 {{color:#0f3460;margin-bottom:.25rem;}}
+    .summary {{background:#fff;border-radius:8px;padding:1rem 1.5rem;
+               box-shadow:0 1px 4px rgba(0,0,0,.08);margin-bottom:1.5rem;}}
+    .summary ul {{list-style:none;padding:0;margin:0;}}
+    .summary li {{padding:.25rem 0;}}
+    .proposal-card {{background:#fff;border-radius:8px;padding:1.25rem 1.5rem;
+                     box-shadow:0 1px 4px rgba(0,0,0,.08);margin-bottom:1.25rem;
+                     border-left:5px solid #e94560;}}
+    .proposal-meta {{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem;}}
+    .badge {{background:#e0e0e0;color:#333;border-radius:12px;
+             padding:.15rem .7rem;font-size:.8rem;font-weight:600;}}
+    .score-badge {{background:#fce4ec;color:#c62828;}}
+    .platform-badge {{background:#e3f2fd;color:#0d47a1;}}
+    .meta-list {{list-style:none;padding:0;margin:.5rem 0;}}
+    .meta-list li {{padding:.2rem 0;font-size:.9em;}}
+    .meta-list a {{color:#0f3460;}}
+    .snippet blockquote {{background:#f0f4ff;border-left:4px solid #1976d2;
+                          margin:.5rem 0;padding:.5rem 1rem;border-radius:0 4px 4px 0;
+                          font-size:.9em;}}
+    .outreach pre {{background:#f9f9f9;border:1px solid #ddd;border-radius:4px;
+                    padding:1rem;font-size:.85em;white-space:pre-wrap;
+                    word-break:break-word;overflow-x:auto;}}
+    .empty-notice {{background:#fff8e1;border-left:4px solid #ffc107;
+                    padding:1rem 1.5rem;border-radius:0 8px 8px 0;
+                    font-size:1rem;color:#5d4037;}}
+    footer {{margin-top:2rem;font-size:.8rem;color:#888;border-top:1px solid #ddd;
+             padding-top:1rem;}}
+    a {{color:#0f3460;}}
+  </style>
+</head>
+<body>
+  <h1>Vectra-Flow — Partnership Proposals</h1>
+
+  <div class="summary">
+    <ul>
+      <li><strong>Generated at (UTC):</strong> {esc(generated_at)}</li>
+      <li><strong>Total proposals:</strong> {esc(len(proposals))}</li>
+      <li><strong>Free period:</strong> {esc(FREE_PERIOD_DAYS)} days — zero cost</li>
+      <li><strong>Revenue share (post-free):</strong> ≥{esc(int(MIN_FEE_RATE * 100))}%</li>
+    </ul>
+  </div>
+
+  {empty_html}
+  {cards_html}
+
+  <footer>
+    Vectra-Flow — automated partnership outreach.
+    Free for the first {esc(FREE_PERIOD_DAYS)} days, then
+    ≥{esc(int(MIN_FEE_RATE * 100))}% revenue share.
+    &nbsp;|&nbsp; <a href="./notifications.md">Download Markdown version</a>
+    &nbsp;|&nbsp; <a href="../assets.html">Asset evaluation report</a>
+    &nbsp;|&nbsp; <a href="../index.html">Feedback report</a>
+  </footer>
+</body>
+</html>
+"""

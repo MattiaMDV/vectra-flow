@@ -28,7 +28,11 @@ _REQUIRED_COLUMNS: frozenset[str] = frozenset(
 )
 
 
-def load_assets(input_glob: str, max_rows: int = 5_000) -> list[AssetOpportunity]:
+def load_assets(
+    input_glob: str,
+    max_rows: int = 5_000,
+    column_map: dict[str, str] | None = None,
+) -> list[AssetOpportunity]:
     """Load asset opportunity CSV files matching *input_glob*.
 
     Parameters
@@ -37,6 +41,19 @@ def load_assets(input_glob: str, max_rows: int = 5_000) -> list[AssetOpportunity
         Glob pattern (e.g. ``"data/assets/*.csv"``).
     max_rows:
         Maximum number of rows to process across all matched files.
+    column_map:
+        Optional dict mapping source column names (e.g. from a Google Form
+        export) to the required column names.  Example::
+
+            {
+                "URL asset":             "url",
+                "Nome asset / Titolo":   "title",
+                "Prezzo richiesto":      "asking_price",
+                "MRR attuale (o 0)":     "monthly_revenue",
+                "Traffico mensile":      "monthly_traffic",
+            }
+
+        Keys not present in the CSV are silently ignored.
 
     Returns
     -------
@@ -57,6 +74,8 @@ def load_assets(input_glob: str, max_rows: int = 5_000) -> list[AssetOpportunity
     frames: list[pd.DataFrame] = []
     for path in files:
         df = pd.read_csv(path)
+        if column_map:
+            df = df.rename(columns={k: v for k, v in column_map.items() if k in df.columns})
         _validate_columns(df, path)
         frames.append(df)
 

@@ -109,3 +109,45 @@ def test_validate_columns_passes_when_all_present() -> None:
         }
     )
     _validate_columns(df)  # should not raise
+
+
+def test_load_assets_with_column_map(tmp_path: Path) -> None:
+    """Column mapping should rename form columns before validation."""
+    csv = tmp_path / "form_export.csv"
+    csv.write_text(
+        "URL asset,Nome asset,Prezzo richiesto,MRR attuale,Traffico mensile\n"
+        "https://example.com/x,My App,300,25,2000\n",
+        encoding="utf-8",
+    )
+    column_map = {
+        "URL asset": "url",
+        "Nome asset": "title",
+        "Prezzo richiesto": "asking_price",
+        "MRR attuale": "monthly_revenue",
+        "Traffico mensile": "monthly_traffic",
+    }
+    assets = load_assets(str(csv), column_map=column_map)
+    assert len(assets) == 1
+    assert assets[0].url == "https://example.com/x"
+    assert assets[0].title == "My App"
+    assert assets[0].asking_price == pytest.approx(300.0)
+    assert assets[0].monthly_revenue == pytest.approx(25.0)
+    assert assets[0].monthly_traffic == 2000
+
+
+def test_load_assets_column_map_partial(tmp_path: Path) -> None:
+    """Column map may contain keys not present in the CSV; they are ignored."""
+    csv = tmp_path / "partial.csv"
+    csv.write_text(
+        "URL asset,Nome asset,asking_price,monthly_revenue,monthly_traffic\n"
+        "https://example.com/y,App Y,100,10,500\n",
+        encoding="utf-8",
+    )
+    column_map = {
+        "URL asset": "url",
+        "Nome asset": "title",
+        "NonExistentColumn": "category",
+    }
+    assets = load_assets(str(csv), column_map=column_map)
+    assert len(assets) == 1
+    assert assets[0].url == "https://example.com/y"

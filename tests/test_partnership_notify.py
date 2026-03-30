@@ -174,7 +174,7 @@ def test_create_proposals_empty_input() -> None:
 def test_write_proposals_creates_three_files(tmp_path: Path) -> None:
     proposals = [create_proposal(_make_scouted_asset())]
     paths = write_proposals(proposals, out_dir=tmp_path)
-    assert len(paths) == 3
+    assert len(paths) == 4
     for p in paths:
         assert p.exists()
 
@@ -201,6 +201,22 @@ def test_write_proposals_txt_contains_outreach(tmp_path: Path) -> None:
     assert "TXTTEST" in txt
 
 
+def test_write_proposals_html_created(tmp_path: Path) -> None:
+    proposals = [create_proposal(_make_scouted_asset(name="HTMLTEST"))]
+    write_proposals(proposals, out_dir=tmp_path)
+    html_file = tmp_path / "notifications.html"
+    assert html_file.exists()
+    content = html_file.read_text(encoding="utf-8")
+    assert "HTMLTEST" in content
+    assert "<!DOCTYPE html>" in content
+
+
+def test_write_proposals_html_empty_list_shows_notice(tmp_path: Path) -> None:
+    write_proposals([], out_dir=tmp_path)
+    content = (tmp_path / "notifications.html").read_text(encoding="utf-8")
+    assert "No qualifying assets" in content
+
+
 def test_write_proposals_creates_out_dir(tmp_path: Path) -> None:
     nested = tmp_path / "deep" / "nested"
     proposals = [create_proposal(_make_scouted_asset())]
@@ -210,7 +226,7 @@ def test_write_proposals_creates_out_dir(tmp_path: Path) -> None:
 
 def test_write_proposals_empty_list(tmp_path: Path) -> None:
     paths = write_proposals([], out_dir=tmp_path)
-    assert len(paths) == 3
+    assert len(paths) == 4
     data = json.loads((tmp_path / "notifications.json").read_text(encoding="utf-8"))
     assert data == []
 

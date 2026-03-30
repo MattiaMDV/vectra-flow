@@ -128,14 +128,23 @@ def _run_feedback(args: argparse.Namespace, parser: argparse.ArgumentParser) -> 
     return 0
 
 
-def _run_assets(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:  # noqa: ARG001
+def _run_assets(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
     """Digital Real Estate & Flip pipeline."""
     from vectra_flow.asset_ingest import load_assets
     from vectra_flow.asset_score import score_assets
     from vectra_flow.asset_report import write_asset_reports
 
+    column_map = None
+    if args.column_map:
+        try:
+            column_map = json.loads(args.column_map)
+            if not isinstance(column_map, dict):
+                raise TypeError("--column-map must be a JSON object")
+        except (json.JSONDecodeError, TypeError) as exc:
+            parser.error(f"Invalid --column-map value: {exc}")
+
     input_glob = args.input_glob if args.input_glob != "data/*.csv" else "data/assets/*.csv"
-    assets = load_assets(input_glob, max_rows=args.max_rows)
+    assets = load_assets(input_glob, max_rows=args.max_rows, column_map=column_map)
     scored = score_assets(assets)
 
     out_paths = write_asset_reports(scored, out_dir=Path(args.out_dir))

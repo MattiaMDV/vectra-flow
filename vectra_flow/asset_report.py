@@ -131,6 +131,8 @@ def render_asset_html(assets: list[AssetOpportunity]) -> str:
     Scores and recommendations are generated automatically and do not
     constitute financial advice.
     &nbsp;|&nbsp; <a href="./asset_latest.md">Download Markdown version</a>
+    &nbsp;|&nbsp; <a href="./notifications/index.html">Partnership Proposals</a>
+    &nbsp;|&nbsp; <a href="./index.html">Feedback Report</a>
   </footer>
 </body>
 </html>
