@@ -25,13 +25,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Fetch Google Sheets data
+      # ── Feedback pipeline (sentiment analysis) ─────────────────────────────
+      - name: Fetch feedback data from Google Sheets
         env:
           SHEET_URL: ${{ secrets.SHEET_URL }}
           COLUMN_MAP: ${{ secrets.COLUMN_MAP }}
         run: python -m vectra_flow.fetch_inputs
 
-      - name: Generate report
+      - name: Generate feedback report
         env:
           COLUMN_MAP: ${{ secrets.COLUMN_MAP }}
         run: |
@@ -41,11 +42,51 @@ jobs:
             python -m vectra_flow.cli --input-glob "data/*.csv" --out-dir reports
           fi
 
-      - name: Copy latest report to Pages folder
+      # ── Asset submissions pipeline ─────────────────────────────────────────
+      - name: Fetch asset submissions from Google Sheets
+        env:
+          SHEET_URL: ${{ secrets.ASSET_SHEET_URL }}
+          COLUMN_MAP: ${{ secrets.ASSET_COLUMN_MAP }}
+          SHEET_DEST: data/assets/sheet.csv
         run: |
-          mkdir -p docs
+          if [ -n "$SHEET_URL" ]; then
+            python -m vectra_flow.fetch_inputs
+          else
+            echo "ASSET_SHEET_URL not set — skipping asset sheet fetch."
+          fi
+
+      - name: Generate asset evaluation report
+        env:
+          ASSET_COLUMN_MAP: ${{ secrets.ASSET_COLUMN_MAP }}
+        run: |
+          if [ -n "$ASSET_COLUMN_MAP" ]; then
+            python -m vectra_flow.cli --mode assets --input-glob "data/assets/*.csv" \
+              --out-dir reports --column-map "$ASSET_COLUMN_MAP"
+          else
+            python -m vectra_flow.cli --mode assets --input-glob "data/assets/*.csv" \
+              --out-dir reports
+          fi
+
+      # ── Scout pipeline (forum scanning + partnership proposals) ────────────
+      - name: Run asset scout and generate partnership proposals
+        run: |
+          python -m vectra_flow.cli --mode scout --out-dir reports \
+            --notify-dir reports/notifications
+
+      # ── Publish to GitHub Pages ────────────────────────────────────────────
+      - name: Copy reports to Pages folder
+        run: |
+          mkdir -p docs/notifications
           cp reports/latest.html docs/index.html
           cp reports/latest.md docs/latest.md
+          cp reports/asset_latest.html docs/assets.html
+          cp reports/asset_latest.md docs/asset_latest.md
+          if [ -f reports/notifications/notifications.html ]; then
+            cp reports/notifications/notifications.html docs/notifications/index.html
+          fi
+          if [ -f reports/notifications/notifications.md ]; then
+            cp reports/notifications/notifications.md docs/notifications/notifications.md
+          fi
           touch docs/.nojekyll
 
       - name: Commit reports (if changed)

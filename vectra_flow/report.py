@@ -207,6 +207,8 @@ def render_html(r: AnalysisResults) -> str:
     Beta note: this report is produced during the initial 2-week free Beta.
     Vectra Flow will expand with paid tools/integrations and broader services after validation.
     &nbsp;|&nbsp; <a href="./latest.md">Download Markdown version</a>
+    &nbsp;|&nbsp; <a href="./assets.html">Asset Evaluation Report</a>
+    &nbsp;|&nbsp; <a href="./notifications/index.html">Partnership Proposals</a>
   </footer>
 
   <script>
