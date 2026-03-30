@@ -1,0 +1,217 @@
+[
+  {
+    "url": "https://microacquire.com/listing/pdfconverter",
+    "title": "PDFWiz \u2014 Online PDF Converter",
+    "asking_price": 150.0,
+    "monthly_revenue": 0.0,
+    "monthly_traffic": 8000,
+    "tech_stack": [
+      "Node.js",
+      "Express"
+    ],
+    "category": "web-tool",
+    "has_email_list": false,
+    "current_monetization": "nan",
+    "score": 56.0,
+    "revenue_multiple": 0.0,
+    "monetization_gaps": [
+      "subscription",
+      "affiliate",
+      "display_ads"
+    ],
+    "recommendations": [
+      "Introduce a freemium/subscription tier for 'PDFWiz \u2014 Online PDF Converter' (e.g. $2\u20135/month premium plan) to convert free users into recurring revenue.",
+      "Add affiliate links for complementary tools/services in the web-tool niche to generate passive commission.",
+      "With 8,000 monthly visitors, display ads (e.g. Carbon Ads, EthicalAds) could generate meaningful passive revenue with zero additional effort.",
+      "Build an email list immediately \u2014 add a lead-magnet or newsletter signup to capture returning visitors and enable direct marketing."
+    ],
+    "exit_strategy": "hold",
+    "estimated_post_optimization_value": 150.0
+  },
+  {
+    "url": "https://microacquire.com/listing/landingpagebuilder",
+    "title": "PageDrop \u2014 No-Code Landing Page Builder",
+    "asking_price": 700.0,
+    "monthly_revenue": 35.0,
+    "monthly_traffic": 3200,
+    "tech_stack": [
+      "Vue.js",
+      "Firebase"
+    ],
+    "category": "no-code",
+    "has_email_list": true,
+    "current_monetization": "subscription",
+    "score": 52.0,
+    "revenue_multiple": 20.0,
+    "monetization_gaps": [
+      "affiliate",
+      "display_ads"
+    ],
+    "recommendations": [
+      "Add affiliate links for complementary tools/services in the no-code niche to generate passive commission.",
+      "With 3,200 monthly visitors, display ads (e.g. Carbon Ads, EthicalAds) could generate meaningful passive revenue with zero additional effort."
+    ],
+    "exit_strategy": "hold",
+    "estimated_post_optimization_value": 1540.0
+  },
+  {
+    "url": "https://acquire.com/listing/quicknote-app",
+    "title": "QuickNote \u2014 Minimalist Note-Taking Web App",
+    "asking_price": 450.0,
+    "monthly_revenue": 30.0,
+    "monthly_traffic": 1200,
+    "tech_stack": [
+      "PHP5",
+      "jQuery",
+      "MySQL"
+    ],
+    "category": "micro-saas",
+    "has_email_list": false,
+    "current_monetization": "ads",
+    "score": 46.0,
+    "revenue_multiple": 15.0,
+    "monetization_gaps": [
+      "subscription",
+      "affiliate"
+    ],
+    "recommendations": [
+      "Introduce a freemium/subscription tier for 'QuickNote \u2014 Minimalist Note-Taking Web App' (e.g. $2\u20135/month premium plan) to convert free users into recurring revenue.",
+      "Add affiliate links for complementary tools/services in the micro-saas niche to generate passive commission.",
+      "Build an email list immediately \u2014 add a lead-magnet or newsletter signup to capture returning visitors and enable direct marketing.",
+      "Modernise the tech stack: migrating to a contemporary framework improves page speed (Core Web Vitals), SEO ranking, and perceived value when reselling."
+    ],
+    "exit_strategy": "hold",
+    "estimated_post_optimization_value": 1170.0
+  },
+  {
+    "url": "https://acquire.com/listing/linktreeclone",
+    "title": "LinkHub \u2014 Bio Link Page Builder",
+    "asking_price": 800.0,
+    "monthly_revenue": 55.0,
+    "monthly_traffic": 4500,
+    "tech_stack": [
+      "Python",
+      "Flask",
+      "PostgreSQL"
+    ],
+    "category": "micro-saas",
+    "has_email_list": true,
+    "current_monetization": "subscription,affiliate",
+    "score": 44.0,
+    "revenue_multiple": 14.55,
+    "monetization_gaps": [
+      "display_ads"
+    ],
+    "recommendations": [
+      "With 4,500 monthly visitors, display ads (e.g. Carbon Ads, EthicalAds) could generate meaningful passive revenue with zero additional effort."
+    ],
+    "exit_strategy": "hold",
+    "estimated_post_optimization_value": 2120.0
+  },
+  {
+    "url": "https://acquire.com/listing/jobboard",
+    "title": "DevJobs \u2014 Niche Developer Job Board",
+    "asking_price": 1200.0,
+    "monthly_revenue": 90.0,
+    "monthly_traffic": 12000,
+    "tech_stack": [
+      "Next.js",
+      "Supabase",
+      "Vercel"
+    ],
+    "category": "job-board",
+    "has_email_list": true,
+    "current_monetization": "subscription,advertising",
+    "score": 44.0,
+    "revenue_multiple": 13.33,
+    "monetization_gaps": [
+      "affiliate"
+    ],
+    "recommendations": [
+      "Add affiliate links for complementary tools/services in the job-board niche to generate passive commission."
+    ],
+    "exit_strategy": "hold",
+    "estimated_post_optimization_value": 3360.0
+  },
+  {
+    "url": "https://acquire.com/listing/recipekeeper",
+    "title": "RecipeKeeper \u2014 Recipe Management SaaS",
+    "asking_price": 300.0,
+    "monthly_revenue": 20.0,
+    "monthly_traffic": 600,
+    "tech_stack": [
+      "Ruby on Rails",
+      "Heroku"
+    ],
+    "category": "micro-saas",
+    "has_email_list": false,
+    "current_monetization": "subscription",
+    "score": 38.0,
+    "revenue_multiple": 15.0,
+    "monetization_gaps": [
+      "affiliate"
+    ],
+    "recommendations": [
+      "Add affiliate links for complementary tools/services in the micro-saas niche to generate passive commission.",
+      "Build an email list immediately \u2014 add a lead-magnet or newsletter signup to capture returning visitors and enable direct marketing."
+    ],
+    "exit_strategy": "hold",
+    "estimated_post_optimization_value": 780.0
+  },
+  {
+    "url": "https://chromewebstore.google.com/detail/focusblock",
+    "title": "FocusBlock \u2014 Productivity Chrome Extension",
+    "asking_price": 200.0,
+    "monthly_revenue": 0.0,
+    "monthly_traffic": 350,
+    "tech_stack": [
+      "JavaScript",
+      "Chrome Extension API"
+    ],
+    "category": "browser-extension",
+    "has_email_list": false,
+    "current_monetization": "nan",
+    "score": 36.0,
+    "revenue_multiple": 0.0,
+    "monetization_gaps": [
+      "subscription",
+      "affiliate"
+    ],
+    "recommendations": [
+      "Introduce a freemium/subscription tier for 'FocusBlock \u2014 Productivity Chrome Extension' (e.g. $2\u20135/month premium plan) to convert free users into recurring revenue.",
+      "Add affiliate links for complementary tools/services in the browser-extension niche to generate passive commission.",
+      "SEO overhaul needed: rewrite meta titles/descriptions with long-tail keywords, create a sitemap, and submit to Google Search Console to unlock organic traffic growth.",
+      "Build an email list immediately \u2014 add a lead-magnet or newsletter signup to capture returning visitors and enable direct marketing."
+    ],
+    "exit_strategy": "hold",
+    "estimated_post_optimization_value": 200.0
+  },
+  {
+    "url": "https://acquire.com/listing/emailverifier",
+    "title": "MailCheck \u2014 Email Validation API",
+    "asking_price": 500.0,
+    "monthly_revenue": 0.0,
+    "monthly_traffic": 200,
+    "tech_stack": [
+      "Python",
+      "FastAPI"
+    ],
+    "category": "api-tool",
+    "has_email_list": false,
+    "current_monetization": "nan",
+    "score": 30.0,
+    "revenue_multiple": 0.0,
+    "monetization_gaps": [
+      "subscription",
+      "affiliate"
+    ],
+    "recommendations": [
+      "Introduce a freemium/subscription tier for 'MailCheck \u2014 Email Validation API' (e.g. $2\u20135/month premium plan) to convert free users into recurring revenue.",
+      "Add affiliate links for complementary tools/services in the api-tool niche to generate passive commission.",
+      "SEO overhaul needed: rewrite meta titles/descriptions with long-tail keywords, create a sitemap, and submit to Google Search Console to unlock organic traffic growth.",
+      "Build an email list immediately \u2014 add a lead-magnet or newsletter signup to capture returning visitors and enable direct marketing."
+    ],
+    "exit_strategy": "skip",
+    "estimated_post_optimization_value": 0.0
+  }
+]
