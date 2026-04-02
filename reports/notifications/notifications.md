@@ -1,18 +1,18 @@
 # Vectra-Flow — Partnership Notifications
 
-Generated at (UTC): **2026-04-01T11:33:08.855341+00:00**
+Generated at (UTC): **2026-04-02T11:13:54.296607+00:00**
 Total proposals: **4**
 
 ## 1. Latest
 - **Platform:** ethereum_governance
 - **Source URL:** https://ethereum-magicians.org/latest
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-01T11:33:08.854668+00:00
-- **Free period ends:** 2026-04-15T11:33:08.854668+00:00
+- **Created at:** 2026-04-02T11:13:54.296105+00:00
+- **Free period ends:** 2026-04-16T11:13:54.296105+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> Latest topics - Fellowship of Ethereum Magicians Topic Replies Views Activity AllWalletDevs #39, April 15, 2026 Protocol Calls & happenings 0 2 April 1, 2026 Glamsterdam Repricings #5, April 1, 2026 Protocol Calls & happenings 0 3 April 1, 2026 ERC-8210: Agent Assurance ERCs payments , erc , agents 
+> Latest topics - Fellowship of Ethereum Magicians Topic Replies Views Activity ERC-8183: Agentic Commerce ERCs payments , agents , escrow 63 1626 April 2, 2026 [ERC] Coercion-Resistant Vault — Spending limits + timelock + multisig against $5 wrench attacks EIPs security , account-abstraction , wallet
 
 **Outreach message:**
 
@@ -29,7 +29,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-04-15) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-04-16) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -47,8 +47,8 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** uniswap_governance
 - **Source URL:** https://gov.uniswap.org/latest
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-01T11:33:08.854759+00:00
-- **Free period ends:** 2026-04-15T11:33:08.854759+00:00
+- **Created at:** 2026-04-02T11:13:54.296165+00:00
+- **Free period ends:** 2026-04-16T11:13:54.296165+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -69,7 +69,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-04-15) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-04-16) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -87,12 +87,12 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** aave_governance
 - **Source URL:** https://governance.aave.com/latest
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-01T11:33:08.854774+00:00
-- **Free period ends:** 2026-04-15T11:33:08.854774+00:00
+- **Created at:** 2026-04-02T11:13:54.296180+00:00
+- **Free period ends:** 2026-04-16T11:13:54.296180+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> Aave - Governance Forum Topic Replies Views Activity [TEMP CHECK] AAVE Delegate Ecosystem Upgrade: The Aligned Delegates Framework Governance 3 182 April 1, 2026 [ARFC] Aave Will Win Framework Governance 13 1379 April 1, 2026 [ARFC] Aave V4 Activation on Ethereum Mainnet Governance 14 2639 March 31,
+> Aave - Governance Forum Topic Replies Views Activity [TEMP CHECK] AAVE Delegate Ecosystem Upgrade: The Aligned Delegates Framework Governance 8 281 April 2, 2026 Ignas Delegate Platform Delegate Platforms 191 3701 April 2, 2026 [TEMP CHECK] Stablecoin for Impact (SFI) - Yield-to-Impact Button in Aav
 
 **Outreach message:**
 
@@ -109,7 +109,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-04-15) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-04-16) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -127,12 +127,12 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** compound_governance
 - **Source URL:** https://www.comp.xyz/latest
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-01T11:33:08.854785+00:00
-- **Free period ends:** 2026-04-15T11:33:08.854785+00:00
+- **Created at:** 2026-04-02T11:13:54.296191+00:00
+- **Free period ends:** 2026-04-16T11:13:54.296191+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> Latest topics - Compound Community Forum Topic Replies Views Activity ChainSecurity, Certora and zeroShadow Updates Governance Process 32 1001 April 1, 2026 Compound Community Calls Thread Governance Process 27 1176 March 31, 2026 Compound’s policy on accidental ERC-20 transfersto Comet (Compound v3
+> Latest topics - Compound Community Forum Topic Replies Views Activity [Woof] Arbitrum SVR Onboarding Proposals Proposals 4 109 April 2, 2026 Add market USDT on Polygon Proposals 11 1369 April 2, 2026 [Woof] Base SVR Onboarding Proposals Proposals 4 187 April 2, 2026 Compound’s policy on accidental E
 
 **Outreach message:**
 
@@ -149,7 +149,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-04-15) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-04-16) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
