@@ -1,18 +1,58 @@
 # Vectra-Flow — Partnership Notifications
 
-Generated at (UTC): **2026-04-02T11:13:54.296607+00:00**
-Total proposals: **4**
+Generated at (UTC): **2026-04-03T10:31:06.366590+00:00**
+Total proposals: **5**
 
-## 1. Latest
-- **Platform:** ethereum_governance
-- **Source URL:** https://ethereum-magicians.org/latest
-- **Discovery score:** 0.300
-- **Created at:** 2026-04-02T11:13:54.296105+00:00
-- **Free period ends:** 2026-04-16T11:13:54.296105+00:00
+## 1. Announcements
+- **Platform:** bitcointalk
+- **Source URL:** https://bitcointalk.org/index.php?board=159.0
+- **Discovery score:** 0.600
+- **Created at:** 2026-04-03T10:31:06.366009+00:00
+- **Free period ends:** 2026-04-17T10:31:06.366009+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> Latest topics - Fellowship of Ethereum Magicians Topic Replies Views Activity ERC-8183: Agentic Commerce ERCs payments , agents , escrow 63 1626 April 2, 2026 [ERC] Coercion-Resistant Vault — Spending limits + timelock + multisig against $5 wrench attacks EIPs security , account-abstraction , wallet
+> Announcements (Altcoins) Bitcoin Forum April 03, 2026, 10:31:03 AM Welcome, Guest. Please login or register. News: Latest Bitcoin Core release: 30.2 [Torrent] Home Help Search Login Register More Bitcoin Forum > Alternate cryptocurrencies > Announcements (Altcoins) Child Boards Tokens (Altcoins) Ann
+
+**Outreach message:**
+
+```
+Subject: Partnership Proposal — Free Promotional Campaign for Announcements
+
+Hello Announcements team,
+
+I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset discovery and promotion agent.  We found Announcements while monitoring bitcointalk (https://bitcointalk.org/index.php?board=159.0) and believe your project has strong potential that deserves wider attention.
+
+**What we offer:**
+• Active promotion across Reddit (crypto subreddits), Bitcointalk, Ethereum governance forums, Binance Square, and other crypto communities.
+• Regular community updates and engagement posts highlighting your project's value proposition.
+• Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
+
+**Partnership terms:**
+• **Free for the first 14 days** (until 2026-04-17) — zero cost, full promotional service.
+• After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
+
+**Next steps:**
+If you're interested, simply reply to this message or reach out at the contact details below.  We'll kick off the promotional campaign immediately at no cost to you.
+
+Project we found: https://bitcointalk.org/index.php?board=159.0
+
+Best regards,
+Vectra-Flow Partnership Team
+https://github.com/MattiaMDV/vectra-flow
+
+```
+
+## 2. Latest
+- **Platform:** ethereum_governance
+- **Source URL:** https://ethereum-magicians.org/latest
+- **Discovery score:** 0.300
+- **Created at:** 2026-04-03T10:31:06.366076+00:00
+- **Free period ends:** 2026-04-17T10:31:06.366076+00:00
+- **Fee rate (post-free):** 15%
+
+**Snippet:**
+> Latest topics - Fellowship of Ethereum Magicians Topic Replies Views Activity ERC-8210: Agent Assurance ERCs payments , erc , agents 5 90 April 3, 2026 ReceiptOS — verifiable execution receipts for agent cryptography , evm , erc , agents 4 33 April 3, 2026 ERC-8211: Smart Batching ERCs interop , sma
 
 **Outreach message:**
 
@@ -29,7 +69,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-04-16) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-04-17) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -43,12 +83,12 @@ https://github.com/MattiaMDV/vectra-flow
 
 ```
 
-## 2. Uniswap Governance
+## 3. Uniswap Governance
 - **Platform:** uniswap_governance
 - **Source URL:** https://gov.uniswap.org/latest
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-02T11:13:54.296165+00:00
-- **Free period ends:** 2026-04-16T11:13:54.296165+00:00
+- **Created at:** 2026-04-03T10:31:06.366092+00:00
+- **Free period ends:** 2026-04-17T10:31:06.366092+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -69,7 +109,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-04-16) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-04-17) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -83,16 +123,16 @@ https://github.com/MattiaMDV/vectra-flow
 
 ```
 
-## 3. Aave
+## 4. Aave
 - **Platform:** aave_governance
 - **Source URL:** https://governance.aave.com/latest
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-02T11:13:54.296180+00:00
-- **Free period ends:** 2026-04-16T11:13:54.296180+00:00
+- **Created at:** 2026-04-03T10:31:06.366102+00:00
+- **Free period ends:** 2026-04-17T10:31:06.366102+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> Aave - Governance Forum Topic Replies Views Activity [TEMP CHECK] AAVE Delegate Ecosystem Upgrade: The Aligned Delegates Framework Governance 8 281 April 2, 2026 Ignas Delegate Platform Delegate Platforms 191 3701 April 2, 2026 [TEMP CHECK] Stablecoin for Impact (SFI) - Yield-to-Impact Button in Aav
+> Aave - Governance Forum Topic Replies Views Activity [TEMP CHECK] AAVE Delegate Ecosystem Upgrade: The Aligned Delegates Framework Governance 10 329 April 3, 2026 [ARFC] Onboard MNT, mETH, cmETH as collateral assets on Aave v3 Mantle Instance New Asset 7 823 April 3, 2026 [ARFC] Continued Deprecatio
 
 **Outreach message:**
 
@@ -109,7 +149,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-04-16) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-04-17) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -123,16 +163,16 @@ https://github.com/MattiaMDV/vectra-flow
 
 ```
 
-## 4. Latest
+## 5. Latest
 - **Platform:** compound_governance
 - **Source URL:** https://www.comp.xyz/latest
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-02T11:13:54.296191+00:00
-- **Free period ends:** 2026-04-16T11:13:54.296191+00:00
+- **Created at:** 2026-04-03T10:31:06.366112+00:00
+- **Free period ends:** 2026-04-17T10:31:06.366112+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> Latest topics - Compound Community Forum Topic Replies Views Activity [Woof] Arbitrum SVR Onboarding Proposals Proposals 4 109 April 2, 2026 Add market USDT on Polygon Proposals 11 1369 April 2, 2026 [Woof] Base SVR Onboarding Proposals Proposals 4 187 April 2, 2026 Compound’s policy on accidental E
+> Latest topics - Compound Community Forum Topic Replies Views Activity [Gauntlet] Recommendations for Low Utilization Assets - Optimism, Polygon, and Unichain (2026-02-17) Proposals 5 136 April 3, 2026 ChainSecurity, Certora and zeroShadow Updates Governance Process 34 1022 April 2, 2026 [Woof] Arbit
 
 **Outreach message:**
 
@@ -149,7 +189,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-04-16) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-04-17) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
