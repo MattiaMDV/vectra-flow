@@ -8,8 +8,11 @@ import pytest
 from vectra_flow.asset_scout import (
     DEFAULT_SCOUT_URLS,
     ScoutedAsset,
+    _DISCOURSE_HOSTS,
     _extract_project_urls,
+    _fetch_discourse_paragraphs,
     _infer_name,
+    _is_discourse_url,
     _platform_label,
     _score_paragraph,
     _split_paragraphs,
@@ -272,3 +275,142 @@ def test_scan_forums_deduplicates_results() -> None:
     # Even though URL is repeated, snippet keys are the same → deduplicated
     snippets = [a.snippet[:80] for a in result]
     assert len(snippets) == len(set(snippets))
+
+
+# ---------------------------------------------------------------------------
+# _is_discourse_url
+# ---------------------------------------------------------------------------
+
+
+def test_is_discourse_url_known_hosts() -> None:
+    assert _is_discourse_url("https://ethereum-magicians.org/latest") is True
+    assert _is_discourse_url("https://gov.uniswap.org/latest") is True
+    assert _is_discourse_url("https://governance.aave.com/latest") is True
+    assert _is_discourse_url("https://www.comp.xyz/latest") is True
+
+
+def test_is_discourse_url_non_discourse() -> None:
+    assert _is_discourse_url("https://old.reddit.com/r/crypto") is False
+    assert _is_discourse_url("https://bitcointalk.org/board=1") is False
+    assert _is_discourse_url("https://square.binance.com/en") is False
+
+
+def test_discourse_hosts_non_empty() -> None:
+    assert len(_DISCOURSE_HOSTS) > 0
+
+
+# ---------------------------------------------------------------------------
+# _fetch_discourse_paragraphs
+# ---------------------------------------------------------------------------
+
+_FAKE_DISCOURSE_JSON = b"""{
+  "topic_list": {
+    "topics": [
+      {
+        "id": 1,
+        "title": "Undervalued DeFi token looking for partnership",
+        "excerpt": "This is a hidden gem early stage blockchain project seeking investors and community growth."
+      },
+      {
+        "id": 2,
+        "title": "Another defi protocol with solid tokenomics",
+        "excerpt": "Low cap undiscovered token with organic growth and fair launch."
+      },
+      {
+        "id": 3,
+        "title": "short",
+        "excerpt": "tiny"
+      }
+    ]
+  }
+}"""
+
+
+def _make_discourse_urlopen_mock(content: bytes):
+    from unittest.mock import MagicMock
+    mock_resp = MagicMock()
+    mock_resp.__enter__ = MagicMock(return_value=mock_resp)
+    mock_resp.__exit__ = MagicMock(return_value=False)
+    mock_resp.read.return_value = content
+    return mock_resp
+
+
+def test_fetch_discourse_paragraphs_returns_list() -> None:
+    mock_resp = _make_discourse_urlopen_mock(_FAKE_DISCOURSE_JSON)
+    with patch("urllib.request.urlopen", return_value=mock_resp):
+        result = _fetch_discourse_paragraphs("https://ethereum-magicians.org/latest")
+    assert isinstance(result, list)
+
+
+def test_fetch_discourse_paragraphs_combines_title_and_excerpt() -> None:
+    mock_resp = _make_discourse_urlopen_mock(_FAKE_DISCOURSE_JSON)
+    with patch("urllib.request.urlopen", return_value=mock_resp):
+        result = _fetch_discourse_paragraphs("https://ethereum-magicians.org/latest", min_len=10)
+    assert any("Undervalued DeFi token" in p for p in result)
+    assert any("hidden gem" in p for p in result)
+
+
+def test_fetch_discourse_paragraphs_respects_min_len() -> None:
+    mock_resp = _make_discourse_urlopen_mock(_FAKE_DISCOURSE_JSON)
+    with patch("urllib.request.urlopen", return_value=mock_resp):
+        result = _fetch_discourse_paragraphs("https://ethereum-magicians.org/latest", min_len=40)
+    # The "short — tiny" combo is only 12 chars and should be filtered out
+    assert all(len(p) >= 40 for p in result)
+
+
+def test_fetch_discourse_paragraphs_respects_max_count() -> None:
+    mock_resp = _make_discourse_urlopen_mock(_FAKE_DISCOURSE_JSON)
+    with patch("urllib.request.urlopen", return_value=mock_resp):
+        result = _fetch_discourse_paragraphs(
+            "https://ethereum-magicians.org/latest", min_len=10, max_count=1
+        )
+    assert len(result) <= 1
+
+
+# ---------------------------------------------------------------------------
+# scan_forums — Discourse dispatch
+# ---------------------------------------------------------------------------
+
+
+_DISCOURSE_PARAS = [
+    "Undervalued DeFi token seeking partnership early stage blockchain hidden gem investors.",
+    "Low cap defi protocol tokenomics undiscovered organic growth community grassroots.",
+]
+
+
+def test_scan_forums_discourse_url_discovers_assets() -> None:
+    """Discourse URLs trigger the JSON API path and discover assets."""
+    with patch(
+        "vectra_flow.asset_scout._fetch_discourse_paragraphs",
+        return_value=_DISCOURSE_PARAS,
+    ):
+        result = scan_forums(["https://ethereum-magicians.org/latest"], min_score=0.1)
+    assert len(result) > 0
+    assert all(isinstance(a, ScoutedAsset) for a in result)
+
+
+def test_scan_forums_discourse_url_does_not_call_fetch_html() -> None:
+    """For Discourse URLs, _fetch_html must NOT be called."""
+    with (
+        patch(
+            "vectra_flow.asset_scout._fetch_discourse_paragraphs",
+            return_value=_DISCOURSE_PARAS,
+        ) as mock_discourse,
+        patch("vectra_flow.asset_scout._fetch_html") as mock_html,
+    ):
+        scan_forums(["https://ethereum-magicians.org/latest"], min_score=0.1)
+    mock_discourse.assert_called_once()
+    mock_html.assert_not_called()
+
+
+def test_scan_forums_non_discourse_url_does_not_call_discourse_fetcher() -> None:
+    """For non-Discourse URLs, _fetch_discourse_paragraphs must NOT be called."""
+    with (
+        patch("vectra_flow.asset_scout._fetch_html", side_effect=_make_mock_fetch()),
+        patch(
+            "vectra_flow.asset_scout._fetch_discourse_paragraphs"
+        ) as mock_discourse,
+    ):
+        scan_forums(["https://old.reddit.com/r/CryptoMoonShots/"], min_score=0.1)
+    mock_discourse.assert_not_called()
+

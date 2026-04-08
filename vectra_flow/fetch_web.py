@@ -50,18 +50,6 @@ _USER_AGENT = (
     "+https://github.com/MattiaMDV/vectra-flow)"
 )
 
-# Tags whose content we always discard (scripts, styles, navigation…).
-_SKIP_TAGS = frozenset({
-    "script", "style", "noscript", "nav", "footer", "header",
-    "aside", "form", "button", "select", "option",
-})
-
-# Tags that signal the start of a new paragraph / post.
-_BLOCK_TAGS = frozenset({
-    "p", "div", "li", "blockquote", "article", "section",
-    "td", "th", "dt", "dd", "h1", "h2", "h3", "h4", "h5", "h6",
-})
-
 
 class _TextExtractor(HTMLParser):
     """Minimal HTML → plain-text extractor using the standard library."""
@@ -83,11 +71,21 @@ class _TextExtractor(HTMLParser):
 
     def handle_data(self, data: str) -> None:
         if self._skip_depth == 0:
-            self._chunks.append(data)
+            # Normalise inline whitespace (including embedded newlines that are
+            # just HTML source formatting) to a single space.  Block-level
+            # paragraph boundaries are already marked by the explicit "\n"
+            # appended in handle_starttag, so we must NOT let text-node
+            # newlines pollute the paragraph structure.
+            self._chunks.append(re.sub(r"\s+", " ", data))
 
     @property
     def text(self) -> str:
-        return re.sub(r"\s+", " ", "".join(self._chunks)).strip()
+        raw = "".join(self._chunks)
+        # Strip spaces around the block-level newlines and drop empty lines,
+        # but preserve newline boundaries so _split_into_paragraphs / _split_paragraphs
+        # can correctly separate content from different HTML block elements.
+        lines = [line.strip() for line in raw.split("\n")]
+        return "\n".join(line for line in lines if line)
 
 
 def _check_url(url: str) -> None:
