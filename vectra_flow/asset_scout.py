@@ -376,7 +376,9 @@ def _fetch_paragraphs(
         return _fetch_discourse_paragraphs(
             url, timeout=timeout, min_len=min_len, max_count=max_count
         )
-    return _fetch_html_paragraphs(url, timeout=timeout, min_len=min_len, max_count=max_count)
+    return _fetch_html_paragraphs(
+        url, timeout=timeout, min_len=min_len, max_count=max_count
+    )
 
 
 def _platform_label(url: str) -> str:
