@@ -24,14 +24,17 @@ under-valued or seeking attention.  Each hit increments a relevance *score*
 
 from __future__ import annotations
 
+import json
 import re
+import time
 import urllib.parse
+import urllib.request
 import warnings
 from dataclasses import dataclass, field
 from typing import Sequence
 
 # Reuse the existing SSRF-safe fetch primitives
-from vectra_flow.fetch_web import _check_url, _fetch_html, _TextExtractor
+from vectra_flow.fetch_web import _USER_AGENT, _check_url, _fetch_html, _TextExtractor
 
 # ---------------------------------------------------------------------------
 # Default forum targets
@@ -132,6 +135,25 @@ _TICKER_RE = re.compile(r"\$([A-Z]{2,8})\b")
 _URL_RE = re.compile(r"https?://[^\s\"'<>]+")
 
 # ---------------------------------------------------------------------------
+# Discourse JSON API support
+# ---------------------------------------------------------------------------
+
+#: Hostnames of known Discourse-based forums.  These render content via
+#: JavaScript (SPA) so plain HTML scraping returns empty shells.  The
+#: Discourse REST API (``/latest.json``) is used instead.
+_DISCOURSE_HOSTS: frozenset[str] = frozenset({
+    "ethereum-magicians.org",
+    "ethresear.ch",
+    "gov.uniswap.org",
+    "governance.aave.com",
+    "www.comp.xyz",
+    "comp.xyz",
+})
+
+#: Polite delay between HTTP requests (seconds).
+_REQUEST_DELAY: float = 0.5
+
+# ---------------------------------------------------------------------------
 # Data model
 # ---------------------------------------------------------------------------
 
@@ -209,23 +231,22 @@ def scan_forums(
 
     discovered: list[ScoutedAsset] = []
 
-    for url in urls:
+    for i, url in enumerate(urls):
+        # Be polite: add a short delay between consecutive requests.
+        if i > 0 and _REQUEST_DELAY > 0:
+            time.sleep(_REQUEST_DELAY)
+
         platform = _platform_label(url)
         try:
-            html_body = _fetch_html(url, timeout=timeout)
+            paragraphs = _fetch_paragraphs(
+                url,
+                timeout=timeout,
+                min_len=min_paragraph_len,
+                max_count=max_paragraphs_per_url,
+            )
         except Exception as exc:  # noqa: BLE001
             warnings.warn(f"Scout: could not fetch {url!r}: {exc}", stacklevel=2)
             continue
-
-        parser = _TextExtractor()
-        parser.feed(html_body)
-        full_text = parser.text
-
-        paragraphs = _split_paragraphs(
-            full_text,
-            min_len=min_paragraph_len,
-            max_count=max_paragraphs_per_url,
-        )
 
         for para in paragraphs:
             score = _score_paragraph(para)
@@ -260,6 +281,104 @@ def scan_forums(
 # ---------------------------------------------------------------------------
 # Internal helpers
 # ---------------------------------------------------------------------------
+
+
+def _is_discourse_url(url: str) -> bool:
+    """Return ``True`` if *url* belongs to a known Discourse forum.
+
+    Discourse forums render content via JavaScript (SPA), so the HTML
+    scraped by ``urllib`` is an empty shell.  We use their REST API instead.
+    """
+    hostname = urllib.parse.urlparse(url).hostname or ""
+    return hostname in _DISCOURSE_HOSTS
+
+
+def _fetch_discourse_paragraphs(
+    url: str,
+    *,
+    timeout: int = 30,
+    min_len: int = 40,
+    max_count: int = 300,
+) -> list[str]:
+    """Fetch topics from a Discourse forum via its ``/latest.json`` API.
+
+    Each topic's ``title`` and ``excerpt`` fields are combined into a
+    pseudo-paragraph that is then scored by :func:`_score_paragraph`.
+
+    Parameters
+    ----------
+    url:
+        The forum URL (e.g. ``https://ethereum-magicians.org/latest``).
+        ``.json`` is appended automatically if not already present.
+    timeout:
+        Network timeout in seconds.
+    min_len:
+        Minimum character length for a paragraph to be included.
+    max_count:
+        Maximum number of paragraphs to return.
+
+    Returns
+    -------
+    list[str]
+        Pseudo-paragraphs assembled from topic titles and excerpts.
+    """
+    json_url = url.rstrip("/") + ".json" if not url.endswith(".json") else url
+    _check_url(json_url)
+    req = urllib.request.Request(
+        json_url,
+        headers={"User-Agent": _USER_AGENT, "Accept": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=timeout) as resp:  # noqa: S310
+        data = json.loads(resp.read().decode("utf-8", errors="replace"))
+
+    topics = data.get("topic_list", {}).get("topics", [])
+    paragraphs: list[str] = []
+    for topic in topics:
+        title = (topic.get("title") or "").strip()
+        excerpt = (topic.get("excerpt") or "").strip()
+        parts = [p for p in [title, excerpt] if p]
+        if parts:
+            para = " — ".join(parts)
+            if len(para) >= min_len:
+                paragraphs.append(para)
+        if len(paragraphs) >= max_count:
+            break
+    return paragraphs
+
+
+def _fetch_html_paragraphs(
+    url: str,
+    *,
+    timeout: int = 30,
+    min_len: int = 40,
+    max_count: int = 300,
+) -> list[str]:
+    """Fetch and extract text paragraphs from a plain HTML page."""
+    html_body = _fetch_html(url, timeout=timeout)
+    parser = _TextExtractor()
+    parser.feed(html_body)
+    return _split_paragraphs(parser.text, min_len=min_len, max_count=max_count)
+
+
+def _fetch_paragraphs(
+    url: str,
+    *,
+    timeout: int = 30,
+    min_len: int = 40,
+    max_count: int = 300,
+) -> list[str]:
+    """Dispatch to the right fetcher based on *url*.
+
+    * **Discourse forums** — uses :func:`_fetch_discourse_paragraphs` (JSON API).
+    * **All other URLs** — uses :func:`_fetch_html_paragraphs` (HTML scraping).
+    """
+    if _is_discourse_url(url):
+        return _fetch_discourse_paragraphs(
+            url, timeout=timeout, min_len=min_len, max_count=max_count
+        )
+    return _fetch_html_paragraphs(
+        url, timeout=timeout, min_len=min_len, max_count=max_count
+    )
 
 
 def _platform_label(url: str) -> str:

@@ -81,6 +81,25 @@ def test_text_extractor_strips_style() -> None:
     assert "Visible" in parser.text
 
 
+def test_text_extractor_preserves_paragraph_boundaries() -> None:
+    """Block elements must produce separate lines so paragraph splitting works."""
+    html = "<body><p>First paragraph here.</p><p>Second paragraph here.</p></body>"
+    parser = _TextExtractor()
+    parser.feed(html)
+    lines = [l for l in parser.text.split("\n") if l.strip()]
+    assert len(lines) == 2, f"Expected 2 paragraphs, got: {lines}"
+
+
+def test_text_extractor_normalises_inline_newlines() -> None:
+    """Newlines inside a <p> are HTML source formatting — they must become spaces."""
+    html = "<p>Line one\nline two\nline three.</p>"
+    parser = _TextExtractor()
+    parser.feed(html)
+    # Should be a single paragraph (no newlines in the middle of text content)
+    assert "\n" not in parser.text.strip()
+    assert "Line one line two line three" in parser.text
+
+
 # ── fetch_web_sources ──────────────────────────────────────────────────────────
 
 _SAMPLE_HTML = b"""<!DOCTYPE html>
