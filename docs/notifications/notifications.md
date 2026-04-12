@@ -1,14 +1,14 @@
 # Vectra-Flow — Partnership Notifications
 
-Generated at (UTC): **2026-04-11T10:05:17.776401+00:00**
+Generated at (UTC): **2026-04-12T10:25:10.303705+00:00**
 Total proposals: **2**
 
 ## 1. Tokens
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-11T10:05:17.775741+00:00
-- **Free period ends:** 2026-04-25T10:05:17.775741+00:00
+- **Created at:** 2026-04-12T10:25:10.303042+00:00
+- **Free period ends:** 2026-04-26T10:25:10.303042+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -29,7 +29,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-04-25) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-04-26) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -47,8 +47,8 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-11T10:05:17.776010+00:00
-- **Free period ends:** 2026-04-25T10:05:17.776010+00:00
+- **Created at:** 2026-04-12T10:25:10.303351+00:00
+- **Free period ends:** 2026-04-26T10:25:10.303351+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -69,7 +69,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-04-25) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-04-26) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
