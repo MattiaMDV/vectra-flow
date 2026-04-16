@@ -12,7 +12,7 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 from typing import Optional
 
-from .models import Movement
+from .models import Movement, PENALTY_FEE
 
 
 def overdue_notifications(
@@ -46,7 +46,7 @@ def overdue_notifications(
             continue
         taker = users.get(m.taker_id, m.taker_id) if users else m.taker_id
         item_name = items.get(m.item_id, m.item_id) if items else m.item_id
-        total = m.base_fee + (m.penalty_fee if m.penalty_applied else __import__("decimal").Decimal("5.00"))
+        total = m.base_fee + (m.penalty_fee if m.penalty_applied else PENALTY_FEE)
         days_late = (ts - m.due_at).days
         messages.append(
             f"⚠️  SCADUTO — {taker} deve versare {total:.2f} € "

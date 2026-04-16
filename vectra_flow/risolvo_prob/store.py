@@ -52,6 +52,16 @@ def _str_to_dt(v: Optional[str]) -> Optional[datetime]:
     return dt
 
 
+def _str_to_dt_required(v: str) -> datetime:
+    """Like _str_to_dt but asserts the value is present (raises if None/empty)."""
+    if not v:
+        raise ValueError("Expected a non-empty datetime string.")
+    dt = datetime.fromisoformat(v)
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
 # ---------------------------------------------------------------------------
 # Serialisers / deserialisers
 # ---------------------------------------------------------------------------
@@ -99,8 +109,8 @@ def _period_from_dict(d: dict) -> Period:
         id=d["id"],
         group_id=d["group_id"],
         duration_months=d["duration_months"],
-        start_date=_str_to_dt(d["start_date"]),  # type: ignore[arg-type]
-        end_date=_str_to_dt(d["end_date"]),  # type: ignore[arg-type]
+        start_date=_str_to_dt_required(d["start_date"]),
+        end_date=_str_to_dt_required(d["end_date"]),
         status=d.get("status", "active"),
     )
 
@@ -154,8 +164,8 @@ def _movement_from_dict(d: dict) -> Movement:
         taker_id=d["taker_id"],
         owner_id=d["owner_id"],
         base_fee=_str_to_decimal(d["base_fee"]),
-        created_at=_str_to_dt(d["created_at"]),  # type: ignore[arg-type]
-        due_at=_str_to_dt(d["due_at"]),  # type: ignore[arg-type]
+        created_at=_str_to_dt_required(d["created_at"]),
+        due_at=_str_to_dt_required(d["due_at"]),
         paid_at=_str_to_dt(d.get("paid_at")),
         penalty_applied=d.get("penalty_applied", False),
         penalty_fee=_str_to_decimal(d.get("penalty_fee", "0.00")),
