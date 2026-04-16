@@ -17,6 +17,7 @@ dependencies = [
 
 [project.scripts]
 vectra-flow = "vectra_flow.cli:main"
+risolvo-prob = "vectra_flow.risolvo_prob.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
