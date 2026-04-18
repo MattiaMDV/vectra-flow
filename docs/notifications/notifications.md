@@ -1,14 +1,14 @@
 # Vectra-Flow — Partnership Notifications
 
-Generated at (UTC): **2026-04-17T11:33:39.579529+00:00**
+Generated at (UTC): **2026-04-18T10:26:23.721720+00:00**
 Total proposals: **5**
 
 ## 1. ANN
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.450
-- **Created at:** 2026-04-17T11:33:39.578825+00:00
-- **Free period ends:** 2026-05-01T11:33:39.578825+00:00
+- **Created at:** 2026-04-18T10:26:23.720976+00:00
+- **Free period ends:** 2026-05-02T10:26:23.720976+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -29,7 +29,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-05-01) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-05-02) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -47,8 +47,8 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.350
-- **Created at:** 2026-04-17T11:33:39.579033+00:00
-- **Free period ends:** 2026-05-01T11:33:39.579033+00:00
+- **Created at:** 2026-04-18T10:26:23.721261+00:00
+- **Free period ends:** 2026-05-02T10:26:23.721261+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -69,7 +69,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-05-01) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-05-02) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -87,8 +87,8 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-17T11:33:39.579049+00:00
-- **Free period ends:** 2026-05-01T11:33:39.579049+00:00
+- **Created at:** 2026-04-18T10:26:23.721278+00:00
+- **Free period ends:** 2026-05-02T10:26:23.721278+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -109,7 +109,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-05-01) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-05-02) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -127,8 +127,8 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-17T11:33:39.579060+00:00
-- **Free period ends:** 2026-05-01T11:33:39.579060+00:00
+- **Created at:** 2026-04-18T10:26:23.721288+00:00
+- **Free period ends:** 2026-05-02T10:26:23.721288+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -149,7 +149,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-05-01) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-05-02) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -167,12 +167,12 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-17T11:33:39.579070+00:00
-- **Free period ends:** 2026-05-01T11:33:39.579070+00:00
+- **Created at:** 2026-04-18T10:26:23.721297+00:00
+- **Free period ends:** 2026-05-02T10:26:23.721297+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> [ANN] Binary-Chain - VeriCoin and Verium - The First Dual-Blockchain Protocol « 1 2 ... 29 30 »
+> [ANN] IMAGECOIN CRYPTOCHAT, IMAGES, MESSAGES IN BLOCKCHAIN[IMG] « 1 2 ... 25 26 »
 
 **Outreach message:**
 
@@ -189,7 +189,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-05-01) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-05-02) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
