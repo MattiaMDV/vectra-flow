@@ -1,14 +1,14 @@
 # Vectra-Flow — Partnership Notifications
 
-Generated at (UTC): **2026-04-22T11:44:21.789947+00:00**
+Generated at (UTC): **2026-04-23T11:46:36.931507+00:00**
 Total proposals: **2**
 
 ## 1. Tokens
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-22T11:44:21.788891+00:00
-- **Free period ends:** 2026-05-06T11:44:21.788891+00:00
+- **Created at:** 2026-04-23T11:46:36.930943+00:00
+- **Free period ends:** 2026-05-07T11:46:36.930943+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -29,7 +29,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-05-06) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-05-07) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -47,12 +47,12 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-04-22T11:44:21.789183+00:00
-- **Free period ends:** 2026-05-06T11:44:21.789183+00:00
+- **Created at:** 2026-04-23T11:46:36.931181+00:00
+- **Free period ends:** 2026-05-07T11:46:36.931181+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> [ANN] FixedCoin (FIX) - The Immutable Blockchain | SHA-256 | 10,000 Supply | FI « 1 2 All »
+> [ANN] Dogeparty, Counterparty for the Dogecoin blockchain! (official) « 1 2 ... 17 18 All »
 
 **Outreach message:**
 
@@ -69,7 +69,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-05-06) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-05-07) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
