@@ -1,14 +1,14 @@
 # Vectra-Flow — Partnership Notifications
 
-Generated at (UTC): **2026-05-28T11:50:27.139152+00:00**
-Total proposals: **2**
+Generated at (UTC): **2026-05-29T11:40:23.471538+00:00**
+Total proposals: **3**
 
 ## 1. Tokens
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-05-28T11:50:27.138421+00:00
-- **Free period ends:** 2026-06-11T11:50:27.138421+00:00
+- **Created at:** 2026-05-29T11:40:23.470808+00:00
+- **Free period ends:** 2026-06-12T11:40:23.470808+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -29,7 +29,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-06-11) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-06-12) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -43,12 +43,52 @@ https://github.com/MattiaMDV/vectra-flow
 
 ```
 
-## 2. ANN
+## 2. We Built
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-05-28T11:50:27.138697+00:00
-- **Free period ends:** 2026-06-11T11:50:27.138697+00:00
+- **Created at:** 2026-05-29T11:40:23.471094+00:00
+- **Free period ends:** 2026-06-12T11:40:23.471094+00:00
+- **Fee rate (post-free):** 15%
+
+**Snippet:**
+> We Built a Blockchain That Owns All Three Layers  Here's Why That Changes Every
+
+**Outreach message:**
+
+```
+Subject: Partnership Proposal — Free Promotional Campaign for We Built
+
+Hello We Built team,
+
+I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset discovery and promotion agent.  We found We Built while monitoring bitcointalk (https://bitcointalk.org/index.php?board=159.0) and believe your project has strong potential that deserves wider attention.
+
+**What we offer:**
+• Active promotion across Reddit (crypto subreddits), Bitcointalk, Ethereum governance forums, Binance Square, and other crypto communities.
+• Regular community updates and engagement posts highlighting your project's value proposition.
+• Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
+
+**Partnership terms:**
+• **Free for the first 14 days** (until 2026-06-12) — zero cost, full promotional service.
+• After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
+
+**Next steps:**
+If you're interested, simply reply to this message or reach out at the contact details below.  We'll kick off the promotional campaign immediately at no cost to you.
+
+Project we found: https://bitcointalk.org/index.php?board=159.0
+
+Best regards,
+Vectra-Flow Partnership Team
+https://github.com/MattiaMDV/vectra-flow
+
+```
+
+## 3. ANN
+- **Platform:** bitcointalk
+- **Source URL:** https://bitcointalk.org/index.php?board=159.0
+- **Discovery score:** 0.300
+- **Created at:** 2026-05-29T11:40:23.471111+00:00
+- **Free period ends:** 2026-06-12T11:40:23.471111+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -69,7 +109,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-06-11) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-06-12) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
