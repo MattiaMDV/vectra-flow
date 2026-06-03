@@ -1,14 +1,14 @@
 # Vectra-Flow — Partnership Notifications
 
-Generated at (UTC): **2026-06-02T12:14:54.522477+00:00**
+Generated at (UTC): **2026-06-03T12:50:20.968769+00:00**
 Total proposals: **4**
 
 ## 1. ANN
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.400
-- **Created at:** 2026-06-02T12:14:54.521711+00:00
-- **Free period ends:** 2026-06-16T12:14:54.521711+00:00
+- **Created at:** 2026-06-03T12:50:20.967953+00:00
+- **Free period ends:** 2026-06-17T12:50:20.967953+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -29,7 +29,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-06-16) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-06-17) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -47,8 +47,8 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.350
-- **Created at:** 2026-06-02T12:14:54.521984+00:00
-- **Free period ends:** 2026-06-16T12:14:54.521984+00:00
+- **Created at:** 2026-06-03T12:50:20.968220+00:00
+- **Free period ends:** 2026-06-17T12:50:20.968220+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -69,7 +69,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-06-16) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-06-17) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -87,8 +87,8 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-06-02T12:14:54.522000+00:00
-- **Free period ends:** 2026-06-16T12:14:54.522000+00:00
+- **Created at:** 2026-06-03T12:50:20.968235+00:00
+- **Free period ends:** 2026-06-17T12:50:20.968235+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -109,7 +109,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-06-16) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-06-17) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -123,25 +123,25 @@ https://github.com/MattiaMDV/vectra-flow
 
 ```
 
-## 4. Draft ERC
-- **Platform:** ethereum_governance
-- **Source URL:** https://ethereum-magicians.org/latest
+## 4. Pre
+- **Platform:** bitcointalk
+- **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-06-02T12:14:54.522010+00:00
-- **Free period ends:** 2026-06-16T12:14:54.522010+00:00
+- **Created at:** 2026-06-03T12:50:20.968246+00:00
+- **Free period ends:** 2026-06-17T12:50:20.968246+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> Draft ERC: Observation Commitment Protocol (OCP) — Chain-Agnostic Cryptographic Commitment Primitive
+> [Pre-ANN] (RABID) RabidCoin - POW blockchain with RandomXv2 algo
 
 **Outreach message:**
 
 ```
-Subject: Partnership Proposal — Free Promotional Campaign for Draft ERC
+Subject: Partnership Proposal — Free Promotional Campaign for Pre
 
-Hello Draft ERC team,
+Hello Pre team,
 
-I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset discovery and promotion agent.  We found Draft ERC while monitoring ethereum_governance (https://ethereum-magicians.org/latest) and believe your project has strong potential that deserves wider attention.
+I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset discovery and promotion agent.  We found Pre while monitoring bitcointalk (https://bitcointalk.org/index.php?board=159.0) and believe your project has strong potential that deserves wider attention.
 
 **What we offer:**
 • Active promotion across Reddit (crypto subreddits), Bitcointalk, Ethereum governance forums, Binance Square, and other crypto communities.
@@ -149,13 +149,13 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-06-16) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-06-17) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
 If you're interested, simply reply to this message or reach out at the contact details below.  We'll kick off the promotional campaign immediately at no cost to you.
 
-Project we found: https://ethereum-magicians.org/latest
+Project we found: https://bitcointalk.org/index.php?board=159.0
 
 Best regards,
 Vectra-Flow Partnership Team
