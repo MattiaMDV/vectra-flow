@@ -1,14 +1,14 @@
 # Vectra-Flow — Partnership Notifications
 
-Generated at (UTC): **2026-06-03T12:50:20.968769+00:00**
-Total proposals: **4**
+Generated at (UTC): **2026-06-04T11:24:59.583805+00:00**
+Total proposals: **5**
 
 ## 1. ANN
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.400
-- **Created at:** 2026-06-03T12:50:20.967953+00:00
-- **Free period ends:** 2026-06-17T12:50:20.967953+00:00
+- **Created at:** 2026-06-04T11:24:59.582994+00:00
+- **Free period ends:** 2026-06-18T11:24:59.582994+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -29,7 +29,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-06-17) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-06-18) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -43,52 +43,12 @@ https://github.com/MattiaMDV/vectra-flow
 
 ```
 
-## 2. ANN
-- **Platform:** bitcointalk
-- **Source URL:** https://bitcointalk.org/index.php?board=159.0
-- **Discovery score:** 0.350
-- **Created at:** 2026-06-03T12:50:20.968220+00:00
-- **Free period ends:** 2026-06-17T12:50:20.968220+00:00
-- **Fee rate (post-free):** 15%
-
-**Snippet:**
-> [ANN] CandyChain - AI Layer 1 - CANDY Presale Live - $0.0004
-
-**Outreach message:**
-
-```
-Subject: Partnership Proposal — Free Promotional Campaign for ANN
-
-Hello ANN team,
-
-I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset discovery and promotion agent.  We found ANN while monitoring bitcointalk (https://bitcointalk.org/index.php?board=159.0) and believe your project has strong potential that deserves wider attention.
-
-**What we offer:**
-• Active promotion across Reddit (crypto subreddits), Bitcointalk, Ethereum governance forums, Binance Square, and other crypto communities.
-• Regular community updates and engagement posts highlighting your project's value proposition.
-• Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
-
-**Partnership terms:**
-• **Free for the first 14 days** (until 2026-06-17) — zero cost, full promotional service.
-• After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
-
-**Next steps:**
-If you're interested, simply reply to this message or reach out at the contact details below.  We'll kick off the promotional campaign immediately at no cost to you.
-
-Project we found: https://bitcointalk.org/index.php?board=159.0
-
-Best regards,
-Vectra-Flow Partnership Team
-https://github.com/MattiaMDV/vectra-flow
-
-```
-
-## 3. Tokens
+## 2. Tokens
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-06-03T12:50:20.968235+00:00
-- **Free period ends:** 2026-06-17T12:50:20.968235+00:00
+- **Created at:** 2026-06-04T11:24:59.583259+00:00
+- **Free period ends:** 2026-06-18T11:24:59.583259+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -109,7 +69,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-06-17) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-06-18) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -123,25 +83,25 @@ https://github.com/MattiaMDV/vectra-flow
 
 ```
 
-## 4. Pre
+## 3. ANN
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-06-03T12:50:20.968246+00:00
-- **Free period ends:** 2026-06-17T12:50:20.968246+00:00
+- **Created at:** 2026-06-04T11:24:59.583276+00:00
+- **Free period ends:** 2026-06-18T11:24:59.583276+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> [Pre-ANN] (RABID) RabidCoin - POW blockchain with RandomXv2 algo
+> [ANN] Dogeparty, Counterparty for the Dogecoin blockchain! (official) « 1 2 ... 17 18 All »
 
 **Outreach message:**
 
 ```
-Subject: Partnership Proposal — Free Promotional Campaign for Pre
+Subject: Partnership Proposal — Free Promotional Campaign for ANN
 
-Hello Pre team,
+Hello ANN team,
 
-I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset discovery and promotion agent.  We found Pre while monitoring bitcointalk (https://bitcointalk.org/index.php?board=159.0) and believe your project has strong potential that deserves wider attention.
+I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset discovery and promotion agent.  We found ANN while monitoring bitcointalk (https://bitcointalk.org/index.php?board=159.0) and believe your project has strong potential that deserves wider attention.
 
 **What we offer:**
 • Active promotion across Reddit (crypto subreddits), Bitcointalk, Ethereum governance forums, Binance Square, and other crypto communities.
@@ -149,7 +109,87 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-06-17) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-06-18) — zero cost, full promotional service.
+• After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
+
+**Next steps:**
+If you're interested, simply reply to this message or reach out at the contact details below.  We'll kick off the promotional campaign immediately at no cost to you.
+
+Project we found: https://bitcointalk.org/index.php?board=159.0
+
+Best regards,
+Vectra-Flow Partnership Team
+https://github.com/MattiaMDV/vectra-flow
+
+```
+
+## 4. ANN
+- **Platform:** bitcointalk
+- **Source URL:** https://bitcointalk.org/index.php?board=159.0
+- **Discovery score:** 0.300
+- **Created at:** 2026-06-04T11:24:59.583287+00:00
+- **Free period ends:** 2026-06-18T11:24:59.583287+00:00
+- **Fee rate (post-free):** 15%
+
+**Snippet:**
+> {ANN}{LDOGE} - LITEDOGE {Scrypt Layer 1 blockchain and Solana LDOGE Token}(2026) « 1 2 ... 54 55 »
+
+**Outreach message:**
+
+```
+Subject: Partnership Proposal — Free Promotional Campaign for ANN
+
+Hello ANN team,
+
+I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset discovery and promotion agent.  We found ANN while monitoring bitcointalk (https://bitcointalk.org/index.php?board=159.0) and believe your project has strong potential that deserves wider attention.
+
+**What we offer:**
+• Active promotion across Reddit (crypto subreddits), Bitcointalk, Ethereum governance forums, Binance Square, and other crypto communities.
+• Regular community updates and engagement posts highlighting your project's value proposition.
+• Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
+
+**Partnership terms:**
+• **Free for the first 14 days** (until 2026-06-18) — zero cost, full promotional service.
+• After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
+
+**Next steps:**
+If you're interested, simply reply to this message or reach out at the contact details below.  We'll kick off the promotional campaign immediately at no cost to you.
+
+Project we found: https://bitcointalk.org/index.php?board=159.0
+
+Best regards,
+Vectra-Flow Partnership Team
+https://github.com/MattiaMDV/vectra-flow
+
+```
+
+## 5. TESTNET
+- **Platform:** bitcointalk
+- **Source URL:** https://bitcointalk.org/index.php?board=159.0
+- **Discovery score:** 0.300
+- **Created at:** 2026-06-04T11:24:59.583296+00:00
+- **Free period ends:** 2026-06-18T11:24:59.583296+00:00
+- **Fee rate (post-free):** 15%
+
+**Snippet:**
+> [TESTNET] Chipcoin - Bitcoin-inspired PoW blockchain with native node rewards
+
+**Outreach message:**
+
+```
+Subject: Partnership Proposal — Free Promotional Campaign for TESTNET
+
+Hello TESTNET team,
+
+I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset discovery and promotion agent.  We found TESTNET while monitoring bitcointalk (https://bitcointalk.org/index.php?board=159.0) and believe your project has strong potential that deserves wider attention.
+
+**What we offer:**
+• Active promotion across Reddit (crypto subreddits), Bitcointalk, Ethereum governance forums, Binance Square, and other crypto communities.
+• Regular community updates and engagement posts highlighting your project's value proposition.
+• Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
+
+**Partnership terms:**
+• **Free for the first 14 days** (until 2026-06-18) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
