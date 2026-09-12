@@ -1,14 +1,14 @@
 # Vectra-Flow — Partnership Notifications
 
-Generated at (UTC): **2026-09-11T12:48:54.369319+00:00**
-Total proposals: **3**
+Generated at (UTC): **2026-09-12T12:09:40.133912+00:00**
+Total proposals: **4**
 
 ## 1. Tokens
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-09-11T12:48:54.368831+00:00
-- **Free period ends:** 2026-09-25T12:48:54.368831+00:00
+- **Created at:** 2026-09-12T12:09:40.133142+00:00
+- **Free period ends:** 2026-09-26T12:09:40.133142+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -29,7 +29,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-09-25) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-09-26) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -47,12 +47,12 @@ https://github.com/MattiaMDV/vectra-flow
 - **Platform:** bitcointalk
 - **Source URL:** https://bitcointalk.org/index.php?board=159.0
 - **Discovery score:** 0.300
-- **Created at:** 2026-09-11T12:48:54.368892+00:00
-- **Free period ends:** 2026-09-25T12:48:54.368892+00:00
+- **Created at:** 2026-09-12T12:09:40.133405+00:00
+- **Free period ends:** 2026-09-26T12:09:40.133405+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
-> [ANN] Touki Blockchain (TOUKI)  EVM Layer-1 for creators | vs ETH, BNB & Solana
+> [ANN] Dogeparty, Counterparty for the Dogecoin blockchain! (official) « 1 2 ... 17 18 All »
 
 **Outreach message:**
 
@@ -69,7 +69,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-09-25) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-09-26) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
@@ -83,12 +83,52 @@ https://github.com/MattiaMDV/vectra-flow
 
 ```
 
-## 3. RFC
+## 3. ANN
+- **Platform:** bitcointalk
+- **Source URL:** https://bitcointalk.org/index.php?board=159.0
+- **Discovery score:** 0.300
+- **Created at:** 2026-09-12T12:09:40.133422+00:00
+- **Free period ends:** 2026-09-26T12:09:40.133422+00:00
+- **Fee rate (post-free):** 15%
+
+**Snippet:**
+> [ANN] [NEW 0.1.2] Bitcoin Origins - Experimental Bitcoin 0.1-inspired blockchain
+
+**Outreach message:**
+
+```
+Subject: Partnership Proposal — Free Promotional Campaign for ANN
+
+Hello ANN team,
+
+I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset discovery and promotion agent.  We found ANN while monitoring bitcointalk (https://bitcointalk.org/index.php?board=159.0) and believe your project has strong potential that deserves wider attention.
+
+**What we offer:**
+• Active promotion across Reddit (crypto subreddits), Bitcointalk, Ethereum governance forums, Binance Square, and other crypto communities.
+• Regular community updates and engagement posts highlighting your project's value proposition.
+• Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
+
+**Partnership terms:**
+• **Free for the first 14 days** (until 2026-09-26) — zero cost, full promotional service.
+• After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
+
+**Next steps:**
+If you're interested, simply reply to this message or reach out at the contact details below.  We'll kick off the promotional campaign immediately at no cost to you.
+
+Project we found: https://bitcointalk.org/index.php?board=159.0
+
+Best regards,
+Vectra-Flow Partnership Team
+https://github.com/MattiaMDV/vectra-flow
+
+```
+
+## 4. RFC
 - **Platform:** uniswap_governance
 - **Source URL:** https://gov.uniswap.org/latest
 - **Discovery score:** 0.300
-- **Created at:** 2026-09-11T12:48:54.368907+00:00
-- **Free period ends:** 2026-09-25T12:48:54.368907+00:00
+- **Created at:** 2026-09-12T12:09:40.133434+00:00
+- **Free period ends:** 2026-09-26T12:09:40.133434+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -109,7 +149,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-09-25) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-09-26) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
