@@ -1,14 +1,14 @@
 # Vectra-Flow — Partnership Notifications
 
-Generated at (UTC): **2026-11-11T16:08:17.872659+00:00**
+Generated at (UTC): **2026-11-12T16:47:32.729017+00:00**
 Total proposals: **1**
 
 ## 1. RFC
 - **Platform:** uniswap_governance
 - **Source URL:** https://gov.uniswap.org/latest
 - **Discovery score:** 0.300
-- **Created at:** 2026-11-11T16:08:17.872234+00:00
-- **Free period ends:** 2026-11-25T16:08:17.872234+00:00
+- **Created at:** 2026-11-12T16:47:32.728537+00:00
+- **Free period ends:** 2026-11-26T16:47:32.728537+00:00
 - **Fee rate (post-free):** 15%
 
 **Snippet:**
@@ -29,7 +29,7 @@ I'm reaching out on behalf of **Vectra-Flow**, an autonomous digital-asset disco
 • Inclusion in our curated 'Undervalued Assets' report distributed to our subscriber network.
 
 **Partnership terms:**
-• **Free for the first 14 days** (until 2026-11-25) — zero cost, full promotional service.
+• **Free for the first 14 days** (until 2026-11-26) — zero cost, full promotional service.
 • After the free period: a **15% revenue-share** on proceeds attributable to the campaign (token sale, funding round, or equivalent). This is the minimum rate; higher tiers unlock additional promotional channels.
 
 **Next steps:**
