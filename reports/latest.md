@@ -1,6 +1,6 @@
 # Vectra Flow — Sentiment & Trends Report
 
-Generated at (UTC): **2026-11-27T18:09:47.287968+00:00**
+Generated at (UTC): **2026-11-28T16:51:44.915530+00:00**
 Rows analyzed: **3**
 Date range: **2026-03-20T00:00:00+00:00 → 2026-03-22T00:00:00+00:00**
 
